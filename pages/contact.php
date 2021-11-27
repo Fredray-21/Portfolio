@@ -9,8 +9,7 @@
 
     <meta property="og:title" content="Portefolio - Dabadie - Frédéric">
     <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="Portefolio. Sur ce site vous pouvez trouver les compétences que j'ai acquise au cours de mes formations, les différents projets que j'ai réalisé au sein de mon BTS ainsi que des réalisations personnelles. Bonne visite !">
+    <meta property="og:description" content="Portefolio. Sur ce site vous pouvez trouver les compétences que j'ai acquise au cours de mes formations, les différents projets que j'ai réalisé au sein de mon BTS ainsi que des réalisations personnelles. Bonne visite !">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:url" content="https://frederic-dabadie.inovaperf.me/">
     <meta property="og:site_name" content="https://frederic-dabadie.inovaperf.me/">
@@ -22,9 +21,11 @@
     <meta name="msapplication-navbutton-color" content="#575fcf">
 
     <!-- Style CSS & ICON Fontawesome -->
-    <link href="../tailwind.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link href="../assets/tailwind.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- AOS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -34,6 +35,9 @@
         <!--Main Content-->
         <div class="w-5/6 bg-gray-100">
             <div class="container bg-gray-100 pt-16 px-8">
+                <h1 class="text-5xl mb-7 " data-aos="fade-down" data-aos-duration="1000"><i class="fas fa-phone-alt pr-3 text-green-600"></i><span id="Title"><span class="text-green-600">C</span>ontact</span></h1>
+                <div class="border-2   border-green-500 w-1/6 my-4" data-aos="flip-left" data-aos-duration="1200"></div>
+
                 fffrrrrrrrrrrrrrreeeeeeeeeeeeeeeeeeeee zijfzeijf izjenb fze jzef ijze fjizebf zi Lorem ipsum dolor sit
                 amet, consectetur adipisicing elit. Facere molestias iure quo, corporis earum nostrum tempora ipsa sed?
                 Iste similique dicta ullam eaque minus doloremque maxime eum, asperiores eos suscipit dolorum nemo
@@ -54,22 +58,21 @@
 
         <div class="w-1/6  bg-gray-900  px-2 py-6  fixed  top-0  left-0 h-full ">
             <div class="px-6">
-            <div class="flex flex-wrap justify-center">
-            <div class="px-4 w-52 mb-10">
-                <img src="../assets/profil-picture.jpeg" alt="..."
-                    class="shadow rounded-full max-w-full h-auto align-middle border-none" />
-            </div>
-        </div>
-
-        <div class="text-white text-6xl text-center mb-5">
-            <a href="https://fr.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203" target="_blank"
-                class="hover:text-green-500"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Fredray-21" target="_blank" class="hover:text-green-500"><i class="fab fa-github" ></i></a>
-        </div>
-
-
                 <ul class="flex flex-col text-left">
+                    <div class="flex flex-wrap justify-center">
+                        <div class="px-4 w-52 mb-2">
+                            <img src="../assets/profil-picture.jpeg" alt="..." class="shadow rounded-full max-w-full h-auto align-middle border-none" />
+                        </div>
+                    </div>
 
+                    <div class="text-white text-3xl text-center mb-5 border-l-2  border-green-500" data-aos="fade-left" data-aos-duration="1000">
+                        <p data-aos="fade-right" data-aos-duration="1000">Frédéric Dabadie</p>
+                    </div>
+
+                    <div class="text-white text-6xl text-center mb-5">
+                        <a href="https://fr.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203" target="_blank" class="hover:text-green-500"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Fredray-21" target="_blank" class="hover:text-green-500"><i class="fab fa-github"></i></a>
+                    </div>
                     <li class="mr-5 flex-1">
                         <a href="../index.html" class="block py-3 pl-1 align-middle text-gray-700 no-underline hover:text-green-500 border-b-2 border-transparent  hover:border-green-500">
                             <i class="fas fa-home pr-3"></i><span class="text-gray-400 ">Acceuil</span>
@@ -115,5 +118,10 @@
 
     </div>
 </body>
+<script type="text/javascript" src="../assets/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>
