@@ -14,6 +14,13 @@ for (let index = 0; index < text.length; index++) {
     }
 }
 document.getElementById("Title").innerHTML = Title;
-
 // End random color in Title
 
+function goFullscreen(id) {
+    var element = document.getElementById(id);
+    if (element.mozRequestFullScreen) {
+        element.mozRequestFullScreen();
+    } else if (element.webkitRequestFullScreen) {
+        element.webkitRequestFullScreen();
+    }
+}

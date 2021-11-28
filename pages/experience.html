@@ -49,7 +49,15 @@
                     <!--Card1  -->
                     <div class="max-w-lg  rounded overflow-hidden shadow-lg m-5" data-aos="zoom-in"
                         data-aos-duration="1500">
-                        <video class="" src="../assets/pro/astreinte.mp4" controls muted autoplay loop></video>
+                        <div class="relative">
+                            <button data-aos="fade-up" data-aos-duration="2500" title="Fullscreen"
+                                class="absolute top-5 right-0 z-10 px-2 py-1 bg-green-600 text-white"
+                                onclick="goFullscreen('video1'); return false">
+                                <i class="fas fa-expand"></i> Fullscreen
+                            </button>
+                            <video id="video1" src="../assets/pro/astreinte.mp4" muted autoplay loop></video>
+                        </div>
+
                         <div class="px-6 py-2">
                             <div class="font-bold text-xl mb-2"><a href="https://www.andra.fr" target="_blank"
                                     class="underline" title="Voir le site">ANDRA</a></div>
@@ -78,14 +86,25 @@
                     <!--Card1  -->
                     <div class="max-w-lg  rounded overflow-hidden shadow-lg m-5" data-aos="zoom-in"
                         data-aos-duration="1500">
-                        <video class="" src="../assets/pro/Gestion-tache.mp4" controls muted autoplay loop></video>
+                        <div class="relative">
+                            <button data-aos="fade-up" data-aos-duration="2500" title="Fullscreen"
+                                class="absolute top-5 right-0 z-10 px-2 py-1 bg-green-600 text-white"
+                                onclick="goFullscreen('video2'); return false">
+                                <i class="fas fa-expand"></i> Fullscreen
+                            </button>
+                            <video id="video2" src="../assets/pro/Gestion-tache.mp4" muted autoplay loop></video>
+                        </div>
+
+
                         <div class="px-6 py-2">
                             <div class="font-bold text-xl mb-2"><a href="https://www.andra.fr" target="_blank"
                                     class="underline" title="Voir le site">ANDRA</a></div>
+
                             <p class="text-gray-700 text-base">
                                 Création d'une petite application <span class="text-green-600 font-bold">Client
                                     Léger</span>
                                 d'organisation de gestion de taches.
+
                             </p>
                             <div class="text-right pt-5">
                                 Réalisé en Mai 2021
