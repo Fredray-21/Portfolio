@@ -17,4 +17,3 @@ document.getElementById("Title").innerHTML = Title;
 
 // End random color in Title
 
-
