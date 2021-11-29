@@ -38,21 +38,26 @@
                 <h1 class="text-5xl mb-7 " data-aos="fade-down" data-aos-duration="1000"><i class="fas fa-phone-alt pr-3 text-green-600"></i><span id="Title"><span class="text-green-600">C</span>ontact</span></h1>
                 <div class="border-2   border-green-500 w-1/6 my-4" data-aos="flip-left" data-aos-duration="1200"></div>
 
-                fffrrrrrrrrrrrrrreeeeeeeeeeeeeeeeeeeee zijfzeijf izjenb fze jzef ijze fjizebf zi Lorem ipsum dolor sit
-                amet, consectetur adipisicing elit. Facere molestias iure quo, corporis earum nostrum tempora ipsa sed?
-                Iste similique dicta ullam eaque minus doloremque maxime eum, asperiores eos suscipit dolorum nemo
-                praesentium a facere, laborum delectus non natus nostrum deserunt culpa unde! Harum, officia aut?
-                Maiores voluptatibus atque ex at earum architecto, quo consectetur maxime esse suscipit! Sit laudantium
-                ipsam id, optio in saepe aliquid, voluptatibus non odio deleniti reprehenderit neque a eaque ipsa, earum
-                minima iste perspiciatis quos. Id, nihil? Est laboriosam et reiciendis natus incidunt voluptates
-                voluptatem sunt omnis esse? Inventore maxime aliquid in nostrum unde quos hic atque deleniti dolores ad,
-                eaque corporis facilis quae voluptatibus ipsum nihil, eum commodi culpa maiores reiciendis. Expedita
-                alias totam aut autem, recusandae illum eligendi praesentium nemo, consequatur commodi tempora quae
-                omnis similique distinctio perferendis rem quisquam impedit officiis iure quis ipsam. Unde cum ipsum
-                illo eius at numquam quas suscipit, enim possimus, quaerat asperiores esse ut a, est minus explicabo!
-                Officia quidem ducimus sit odit quam animi adipisci rem dolore esse. Quas nostrum optio ratione qui
-                voluptates quisquam exercitationem, non, nihil dolores itaque iure animi architecto eius expedita
-                temporibus dolorum magni? Iste totam ea animi ipsum eum dolorem est?
+                <div class="text-lg mt-10 mb-8">
+                    <p class="">Vous pouvez <span class="text-green-600 font-bold">me contacter</span> par le biais de ce formulaire.</p>
+                    <p class="">Il est nécessaire de mettre une adresse mail <span class="text-green-600 font-bold">valide</span> afin que je puisse vous recontacter par la suite.</p>
+                </div>
+
+                <form method="post" action="">
+                    <input autocomplete="off" class="py-4 px-12 border-b-4 border-transparent hover:bg-green-400 focus:bg-green-400 focus:border-green-700 rounded text-lg outline-none text-white bg-green-600 placeholder-white m-6" type="text" name="nom" placeholder="Nom" required>
+                    <input autocomplete="off" class="py-4 px-12 border-b-4 border-transparent hover:bg-green-400 focus:bg-green-400 focus:border-green-700 rounded text-lg outline-none text-white bg-green-600 placeholder-white m-6" type="text" name="prenom" placeholder="Prenom" required><br>
+                    <input autocomplete="off" class="py-4 px-12 border-b-4 border-transparent hover:bg-green-400 focus:bg-green-400 focus:border-green-700 rounded text-lg outline-none text-white bg-green-600 placeholder-white m-6" type="email" name="email" placeholder="Email" required>
+                    <input autocomplete="off" class="py-4 px-12 border-b-4 border-transparent hover:bg-green-400 focus:bg-green-400 focus:border-green-700 rounded text-lg outline-none text-white bg-green-600 placeholder-white m-6" type="text" name="objet" placeholder="Objet" required><br>
+
+
+                    <div class="flex items-center">
+                        <textarea onkeyup="compteur()" id="textareaMessage" autocomplete="off" rows="5" cols="55" maxlength="300" name="message" placeholder="Message" class="resize-none p-4 border-b-4 border-transparent hover:bg-green-400 focus:bg-green-400 focus:border-green-700 outline-none rounded text-lg text-white bg-green-600 placeholder-white m-6" required></textarea>
+                        <p class="font-bold text-xl underline"><span id="compteur">0</span>/300</p><br>
+                    </div>
+
+
+                    <button type="submit" class="mx-6 text-base font-bold border-2 border-green-500 bg-green-500 rounded-lg p-3 hover:bg-gray-100"><i class='fas fa-paper-plane'></i> Envoyer</button>
+                </form>
             </div>
         </div>
 

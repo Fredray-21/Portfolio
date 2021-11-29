@@ -24,3 +24,17 @@ function goFullscreen(id) {
         element.webkitRequestFullScreen();
     }
 }
+
+
+function nbrCara(cara, nbrcara) {
+    var nombre = document.getElementById(cara).value.length;
+    document.getElementById(nbrcara).innerHTML = nombre;
+}
+
+function compteur() {
+    var nombre = document.getElementById("textareaMessage").value.length;
+    document.getElementById("compteur").innerHTML = nombre;
+}
+
+
+
