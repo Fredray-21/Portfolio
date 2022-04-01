@@ -1,20 +1,24 @@
-// Start random color in Title
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-var text = document.getElementById("Title").textContent;
-var randomLettre = getRandomInt(text.length);
-var lettreColor = "<span class='text-green-600'>" + text[randomLettre] + "</span>";
-var Title = "";
-for (let index = 0; index < text.length; index++) {
-    if (index == randomLettre) {
-        Title = Title + lettreColor;
-    } else {
-        Title = Title + text[index];
+var timeoutload = 600;
+var title = document.querySelectorAll('.active span')[0].innerHTML;
+document.getElementsByClassName("title-loading")[0].innerHTML = title + "...";
+
+setTimeout(() => {
+    var text = document.getElementById('textmachine');
+    var splitText = text.innerText.split('');
+    text.innerHTML = '';
+    i = 0
+    setInterval(function () {
+        AjoutDeLettre()
     }
-}
-document.getElementById("Title").innerHTML = Title;
-// End random color in Title
+        , 150);
+
+    function AjoutDeLettre() {
+        if (i < splitText.length) {
+            text.innerHTML += splitText[i];
+            i++;
+        }
+    }
+}, timeoutload);
 
 function goFullscreen(id) {
     var element = document.getElementById(id);
@@ -25,15 +29,23 @@ function goFullscreen(id) {
     }
 }
 
-
-function nbrCara(cara, nbrcara) {
-    var nombre = document.getElementById(cara).value.length;
-    document.getElementById(nbrcara).innerHTML = nombre;
+function showhide(button) {
+    if (button.innerHTML.indexOf("&gt;") > -1) {
+        button.innerHTML = button.innerHTML.replace("&gt;", "&#709;");
+        button.innerHTML = button.innerHTML.replace("Voir", "Fermé");
+    } else {
+        button.innerHTML = button.innerHTML.replace("˅", "&gt;");
+        button.innerHTML = button.innerHTML.replace("Fermé", "Voir");
+    }
+    document.getElementById("div-hidden-" + button.innerHTML.split(" ")[0]).classList.toggle('hidden');
 }
 
-function compteur() {
-    var nombre = document.getElementById("textareaMessage").value.length;
-    document.getElementById("compteur").innerHTML = nombre;
+function loadPage() {
+    setTimeout(() => {
+        document.getElementById("container-loading").style.display = "none";
+        document.getElementById("container").style.opacity = "1";
+        document.getElementById("main").style.display = "block";
+    }, timeoutload);
 }
 
 
