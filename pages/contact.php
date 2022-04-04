@@ -64,14 +64,38 @@
                         <a href="./competences.html"><i class="fas fa-chart-bar"></i><span>Compétences</span></a>
                     </div>
                     <div class="element">
-                        <a href="./experience.html"><i class="fas fa-code"></i><span>Expériences</span></a>
+                        <a href="./experience.php"><i class="fas fa-code"></i><span>Expériences</span></a>
                     </div>
                     <div class="element active">
-                        <a href="./contact.html"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
+                        <a href="./contact.php"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="nav-tel">
+            <div id="list-link-nav">
+                <div class="element ">
+                    <a href="../index.html"><i class="fas fa-home"></i><span>Acceuil</span></a>
+                </div>
+                <div class="element ">
+                    <a href="./presentation.html"><i class="fas fa-user"></i><span>Présentation</span></a>
+                </div>
+                <div class="element ">
+                    <a href="./formation.html"><i class="fas fa-book"></i><span>Formation</span></a>
+                </div>
+                <div class="element">
+                    <a href="./competences.html"><i class="fas fa-chart-bar"></i><span>Compétences</span></a>
+                </div>
+                <div class="element ">
+                    <a href="./experience.php"><i class="fas fa-code"></i><span>Expériences</span></a>
+                </div>
+                <div class="element active">
+                    <a href="./contact.php"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
+                </div>
+            </div>
+    </section>
+
 
         <section id="main" style="display: none;">
             <h1><i class="fas fa-phone-alt"></i> <span id="textmachine">Me Contacter</span></h1>
@@ -88,17 +112,20 @@
                         tree
                     </p>
                     <span>.</span><br>
-                    <span>|_____ Mon Mail: <a class="text-orange" href="mailto:contact@frederic-dabadie.fr">contact@frederic-dabadie.fr</a></span><br>
-                    <span>|_____ Mon <a class="text-orange" target="_blank" href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203/">Linkedin</a></span>
+                    <span>|_____ Mon Mail: <a class="text-orange"
+                            href="mailto:contact@frederic-dabadie.fr">contact@frederic-dabadie.fr</a></span><br>
+                    <span>|_____ Mon <a class="text-orange" target="_blank"
+                            href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203/">Linkedin</a></span>
                     <br>
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
                             <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Nom:</span>$ <input type="text">
+                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Nom:</span>$ <input
+                            type="text">
                     </p>
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
                             <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Prénom:</span>$ <input
-                            type="text">
+                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Prénom:</span>$
+                        <input type="text">
                     </p>
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
                             <span class="text-blue">~/Portefolio</span></span><span
@@ -112,8 +139,8 @@
                     </p>
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
                             <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Votre Message:</span>$ <input
-                            type="text">
+                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Votre
+                            Message:</span>$ <input type="text">
                     </p>
                     <br>
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>

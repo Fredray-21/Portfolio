@@ -30,15 +30,19 @@ function goFullscreen(id) {
 }
 
 function showhide(button) {
-    if (button.innerHTML.indexOf("&gt;") > -1) {
-        button.innerHTML = button.innerHTML.replace("&gt;", "&#709;");
-        button.innerHTML = button.innerHTML.replace("Voir", "Fermé");
-    } else {
-        button.innerHTML = button.innerHTML.replace("˅", "&gt;");
-        button.innerHTML = button.innerHTML.replace("Fermé", "Voir");
+
+    if (!button.innerHTML.includes("RATP")) {
+        if (button.innerHTML.indexOf("&gt;") > -1) {
+            button.innerHTML = button.innerHTML.replace("&gt;", "&#709;");
+            button.innerHTML = button.innerHTML.replace("Voir", "Fermé");
+        } else {
+            button.innerHTML = button.innerHTML.replace("˅", "&gt;");
+            button.innerHTML = button.innerHTML.replace("Fermé", "Voir");
+        }
+        document.getElementById("div-hidden-" + button.innerHTML.split(" ")[0]).classList.toggle('hidden');
     }
-    document.getElementById("div-hidden-" + button.innerHTML.split(" ")[0]).classList.toggle('hidden');
 }
+
 
 function loadPage() {
     setTimeout(() => {
@@ -50,3 +54,12 @@ function loadPage() {
 
 
 
+function VerifiePass(user, pass) {
+    let person = prompt("Please enter your name", "Harry Potter");
+    let text;
+    if (person == null || person == "") {
+        text = "User cancelled the prompt.";
+    } else {
+        text = "Hello " + person + "! How are you today?";
+    }
+}

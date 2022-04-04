@@ -1,15 +1,17 @@
-:root{
-    --green:#34d399;
+:root {
+    --green: #34d399;
     --bleu: #3b82f6;
     --dark-bleu: rgb(3, 9, 24);
 }
-.clignote:after, #textmachine:after{ 
-    content: "|"; 
-    width: 2px; 
-    height: 1.2em; 
+
+.clignote:after,
+#textmachine:after {
+    content: "|";
+    width: 2px;
+    height: 1.2em;
     position: absolute;
     animation: clignote 0.7s linear infinite;
-}    
+}
 
 @keyframes clignote {
     50% {
@@ -18,7 +20,8 @@
 }
 
 
-html, body{
+html,
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -27,33 +30,81 @@ html, body{
     background-color: rgb(241, 240, 240);
 }
 
-#container{
+#container {
     display: flex;
     flex-direction: row;
 }
-#nav{
+
+section#nav-tel {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+#nav-tel #list-link-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#nav-tel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: var(--dark-bleu);
+    z-index: 30;
+
+}
+
+#nav-tel #list-link-nav .element {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:  10px;
+}
+
+#nav-tel .element a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#nav {
     position: fixed;
     top: 0;
     left: 0;
-    width: 17%;
+    width: 250px;
     height: 100%;
     background-color: var(--dark-bleu);
-    padding-top:27.5px;
+    padding-top: 27.5px;
     display: flex;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    min-width: 244px;
+    min-width: 250px;
+    z-index: 31;
+
 }
 
-#nav h1{
+#nav h1 {
     color: white;
     font-size: 1.8em;
     margin-bottom: 0.2em;
 }
 
 
-#img-pp{
+#img-pp {
     width: 60%;
     max-width: 170px;
     border-radius: 50%;
@@ -61,18 +112,20 @@ html, body{
 }
 
 
-#row-social{
+#row-social {
     font-size: 4em;
 }
-#row-social a{
-color: white;
+
+#row-social a {
+    color: white;
 }
-#row-social a:hover{
+
+#row-social a:hover {
     color: var(--green);
 }
 
 
-.separator-nav{
+.separator-nav {
     background-color: var(--green);
     width: 50px;
     height: 5px;
@@ -80,13 +133,15 @@ color: white;
     margin: 20px 0 20px 0;
 }
 
-#list-link-nav a i{
+#list-link-nav a i {
     padding-right: 15px;
 }
+
 #list-link-nav {
     padding-top: 15px;
     text-align: start;
 }
+
 #list-link-nav .element {
     color: white;
     font-size: 1.5em;
@@ -97,106 +152,122 @@ color: white;
     border-bottom: solid 3px var(--green);
     font-weight: bold;
 }
+
 #list-link-nav .active i {
     color: var(--green);
 }
 
-#list-link-nav .active  a span{
+#list-link-nav .active a span {
     color: white;
 }
 
-#list-link-nav .element a{
+#list-link-nav .element a {
     color: rgb(190, 190, 190);
     font-size: 1em;
     text-decoration: none;
 }
 
 
-#main{
-    margin-left: 17%;
-    width: 83%;
-    height: 100%;
+#main {
+    position: sticky;
+    top: 0;
+    left: 250px;
+    width: 70%;
+    min-width: 661px;
+    height: auto;
     padding: 1.5em;
     scroll-behavior: smooth;
 }
 
-#main h1{
+#main h1 {
     display: flex;
     font-size: 2em;
     align-items: center;
+    margin-top: 0;
 }
-#main h1 i{
+
+#main h1 i {
     font-size: 1.5em;
     margin-right: 0.4em;
 }
-.console{
-    width: 80%;
+
+.console {
+    width: 70%;
+    min-width: 757px;
     height: auto;
     padding: 2em;
     border-radius: 10px;
     background-color: var(--dark-bleu);
     color: white;
-    
 }
 
-#button-top{
+#button-top {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 100px;
     margin-bottom: 30px;
 }
-.button-console{ 
-width: 20px;
-height: 20px;
-border-radius: 20px;
+
+.button-console {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
 }
 
 
-#button-green{
+#button-green {
     background-color: rgb(0, 200, 0);
 }
-#button-red{
+
+#button-red {
     background-color: red;
 }
-#button-orange{
+
+#button-orange {
     background-color: orange;
 }
 
-#ListLineConsole{
+#ListLineConsole {
     font-weight: bold;
     font-size: 1.4em;
 }
-.text-green{
+
+.text-green {
     color: var(--green);
 }
-.text-blue{
+
+.text-blue {
     color: var(--bleu);
 }
-.text-orange{
+
+.text-orange {
     color: orange;
 }
-.text-secondaire{
+
+.text-secondaire {
     color: gray;
     font-size: 0.9em;
 }
-.decoration-none{
+
+.decoration-none {
     text-decoration: none;
 }
 
 
-.container-card-experience{
+.container-card-experience {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     border-left: solid 3px white;
     padding-left: 3em;
-    margin-top:  0.25em;
-    margin-left:  0.25em;
-    margin-bottom:  0.25em;
+    margin-top: 0.25em;
+    margin-left: 0.25em;
+    margin-bottom: 0.25em;
 }
-.card-experience{
+
+.card-experience {
     width: 40%;
     border: solid white 2px;
     border-radius: 10px;
@@ -205,19 +276,20 @@ border-radius: 20px;
     overflow: hidden;
 }
 
-.card-experience img, video{
+.card-experience img,
+video {
     max-width: 100%;
     height: auto;
     margin: 0;
 }
 
-.card-experience .button-fullscreen{
+.card-experience .button-fullscreen {
     background-color: orange;
     color: black;
     border: none;
     padding: 5px;
     font-size: 0.7em;
-    position:absolute;
+    position: absolute;
     top: 1.5em;
     right: 0;
     z-index: 2;
@@ -225,31 +297,35 @@ border-radius: 20px;
 }
 
 
-.card-text-container{
+.card-text-container {
     padding: 0.5em;
 }
-.card-text-container .card-Title a{
-color: orange;
-font-size: 1.2em;
+
+.card-text-container .card-Title a {
+    color: orange;
+    font-size: 1.2em;
 }
 
-.card-text-container p{
+.card-text-container p {
     font-size: 0.8em;
 }
-.card-text-container h3{
+
+.card-text-container h3 {
     margin: 0;
     color: white;
     text-decoration: underline;
 }
-.text-important{
+
+.text-important {
     font-weight: bold;
     color: var(--bleu);
 }
-.date-card{
+
+.date-card {
     text-align: end;
 }
 
-.balise{
+.balise {
     border: none;
     border-radius: 10px;
     background-color: orange;
@@ -258,8 +334,8 @@ font-size: 1.2em;
     color: black;
 }
 
-.button-showhide{
-    color:white;
+.button-showhide {
+    color: white;
     border: none;
     background: none;
     font-size: 1em;
@@ -267,6 +343,46 @@ font-size: 1.2em;
     font-family: "Consolas";
     cursor: pointer;
 }
-.hidden{
+
+.hidden {
     display: none;
+}
+
+
+@media screen and (max-width: 1118px) {
+    #container {
+        width: 100%;
+        position: inherit;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    section#nav-tel {
+        display: flex;
+    }
+
+    #main {
+        left: 0;
+    }
+
+    .console {
+        width: 70%;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 872px) {
+    section#nav {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 745px) {
+   #nav{
+       font-size: 0.8em;
+   }
 }
