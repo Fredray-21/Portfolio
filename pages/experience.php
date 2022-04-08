@@ -105,6 +105,7 @@
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
                             <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Expériences</span>$ cat Sommaire.txt</p>
                     <span>.</span><br>
+                    <span>|_____ <a class="text-orange" href="#sommaire-PPE">>Projets Personnels Encadrés</a></span><br>
                     <span>|_____ <a class="text-orange" href="#sommaire-pro">>Professionnelles</a></span><br>
                     <span>|_____ <a class="text-orange" href="#sommaire-perso">>Personnelles</a></span><br>
 
@@ -112,124 +113,194 @@
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
                             <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Expériences</span>$ tree</p>
                     <span>.</span><br>
-                    <span>|_____ <span class="text-orange" id="sommaire-pro">>Professionnelles</span></span><br>
+                    <span>|_____ <span class="text-orange" id="sommaire-PPE">>Projets Personnels Encadrés</span></span><br>
 
+                    <span>| |_____ <button class="button-showhide" onclick="showhide(this)">2022 > <span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
 
-                    <?php if (isset($_GET['RATP']) && $_GET['RATP'] == 'q29v52GSeiHQnidHnM37KJAg4x7k4u9Zu2t5iMLVFC8745Ev56i5XpS') { ?>
-                        <span>| |_____ <button class="button-showhide">RATP ˅</button></span><br>
-                        <div id="div-hidden-RATP">
-                        <?php } else { ?>
-                            <span>| |_____ <button class="button-showhide" onclick="showhide(this)">RATP > <span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
-                            <div id="div-hidden-RATP" class="hidden">
-                            <?php } ?>
-
-
-
-                            <div class="container-card-experience">
-                                <div class="card-experience">
-                                    <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
-                                        <i class="fas fa-expand"></i> Fullscreen
-                                    </button>
-                                    <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
-                                    <div class="card-text-container">
-                                        <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
-                                        </div>
-                                        <p>Developpement d'une maquette de faisabilité en <span class="text-important">Client
-                                                Léger</span>
-                                            qui permet la génération de bordereaux XML spécifique, en fonction d'un
-                                            formulaire choisi et de ses champs.
-                                        </p>
-                                        <p class="date-card">Réalisé de Janvier à Février 2022</p>
-                                        <span class="balise">#HTML/CSS</span>
-                                        <span class="balise">#JavaScript</span>
-                                        <span class="balise">#PHP</span>
-                                        <span class="balise">#XML</span>
-                                    </div>
+                    <div id="div-hidden-2022" class="hidden linktoggle">
+                        <div class="container-card-experience">
+                            <div class="card-experience">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
+                                    <i class="fas fa-expand"></i> Fullscreen
+                                </button>
+                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <div class="card-text-container">
+                                    <div class="card-Title"><span class="text-orange">PPE1 RESA VVA </span></div>
+                                    <p>Developpement d'une application en <span class="text-important">Client
+                                            Léger</span>
+                                        qui permet la génération de curriculum vitae en fonction des information rentree préalablement.
+                                    </p>
+                                    <p class="date-card">Réalisé de Janvier à Février 2022</p>
+                                    <span class="balise">#HTML/CSS</span>
+                                    <span class="balise">#JavaScript</span>
+                                    <span class="balise">#PHP</span>
+                                    <span class="balise">#XML</span>
                                 </div>
                             </div>
-                            </div>
-                            <span>| |_____ <button class="button-showhide" onclick="showhide(this)">ANDRA ><span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
-                            <div id="div-hidden-ANDRA" class="hidden">
-                                <div class="container-card-experience">
-                                    <div class="card-experience">
-                                        <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video2');">
-                                            <i class="fas fa-expand"></i> Fullscreen
-                                        </button>
-                                        <video id="video2" src="../assets/pro/astreinte.mp4" muted="" autoplay="" loop=""></video>
-                                        <div class="card-text-container">
-                                            <div class="card-Title"><a href="https://www.andra.fr/" target="_blank">ANDRA</a>
-                                            </div>
-                                            <p>Adaptation d'une application <span class="text-important">Client Lourd</span> de
-                                                gestion et calcule de colis en application <span class="text-important">Client
-                                                    Léger.</span>
-                                            </p>
-                                            <p class="date-card">Réalisé de Juin à Juillet 2021</p>
-                                            <span class="balise">#HTML/CSS</span>
-                                            <span class="balise">#BootStrap</span>
-                                            <span class="balise">#JavaScript</span>
-                                            <span class="balise">#PHP</span>
-                                        </div>
-                                    </div>
 
-                                    <div class="card-experience">
-                                        <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video3');">
-                                            <i class="fas fa-expand"></i> Fullscreen
-                                        </button>
-                                        <video id="video3" src="../assets/pro/Gestion-tache.mp4" muted="" autoplay="" loop=""></video>
-
-                                        <div class="card-text-container">
-                                            <div class="card-Title"><a href="https://www.andra.fr/" target="_blank">ANDRA</a>
-                                            </div>
-                                            <p>Création d'une petite application <span class="text-important">Client
-                                                    Léger</span>
-                                                d'organisation de gestion de taches.
-                                            </p>
-                                            <p class="date-card">Réalisé en Mai 2021</p>
-                                            <span class="balise">#HTML/CSS</span>
-                                            <span class="balise">#BootStrap</span>
-                                            <span class="balise">#PHP</span>
-                                        </div>
+                            <div class="card-experience">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
+                                    <i class="fas fa-expand"></i> Fullscreen
+                                </button>
+                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <div class="card-text-container">
+                                    <div class="card-Title"><span class="text-orange">PPE2 FETA RESTO</span>
                                     </div>
-                                </div>
-                            </div>
-                            <span>|</span><br>
-                            <span>|_____ <span class="text-orange" id="sommaire-perso">>Personnelles</span></span><br>
-                            <span>| |_____ <button class="button-showhide" onclick="showhide(this)">Flutter Gestionaire de
-                                    Mots de passe > <span class="text-secondaire">(Sélectionné pour
-                                        Voir)</span></button></span><br>
-                            <div id="div-hidden-Flutter" class="hidden">
-                                <div class="container-card-experience">
-                                    <div class="card-experience">
-                                        <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video4');">
-                                            <i class="fas fa-expand"></i> Fullscreen
-                                        </button>
-                                        <video id="video4" src="../assets/pro/" muted="" autoplay="" loop=""></video>
-                                        <div class="card-text-container">
-                                            <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
-                                            </div>
-                                            <p>Developpement d'une maquette de faisabilité en <span class="text-important">Client
-                                                    Léger</span>
-                                                qui permet la génération de bordereaux XML spécifique, en fonction d'un
-                                                formulaire choisi et de ses champs
-                                            </p>
-                                            <p class="date-card">Réalisé de Janvier à Février 2022</p>
-                                            <span class="balise">#HTML/CSS</span>
-                                            <span class="balise">#JavaScript</span>
-                                            <span class="balise">#PHP</span>
-                                            <span class="balise">#XML</span>
-                                        </div>
-                                    </div>
+                                    <p>Developpement d'une application en <span class="text-important">Client
+                                            Léger</span>
+                                        qui permet la génération de curriculum vitae en fonction des information rentree préalablement.
+                                    </p>
+                                    <p class="date-card">Réalisé de Janvier à Février 2022</p>
+                                    <span class="balise">#HTML/CSS</span>
+                                    <span class="balise">#JavaScript</span>
+                                    <span class="balise">#PHP</span>
+                                    <span class="balise">#XML</span>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <span>| |_____ <button class="button-showhide" onclick="showhide(this)">2021 > <span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
+                    <div id="div-hidden-2021" class="hidden linktoggle">
+                        <div class="container-card-experience">
+                            <div class="card-experience">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
+                                    <i class="fas fa-expand"></i> Fullscreen
+                                </button>
+                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <div class="card-text-container">
+                                    <div class="card-Title"><span class="text-orange">PPE1 Générateur de curriculum vitae</span>
+                                    </div>
+                                    <p>Developpement d'une application en <span class="text-important">Client
+                                            Léger</span>
+                                        qui permet la génération de curriculum vitae en fonction des information rentree préalablement.
+                                    </p>
+                                    <p class="date-card">Réalisé de Janvier à Février 2022</p>
+                                    <span class="balise">#HTML/CSS</span>
+                                    <span class="balise">#JavaScript</span>
+                                    <span class="balise">#PHP</span>
+                                    <span class="balise">#XML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span>|</span><br>
+                    <span>|_____ <span class="text-orange" id="sommaire-pro">>Professionnelles</span></span><br>
+                    <?php /* if (isset($_GET['RATP']) && $_GET['RATP'] == 'q29v52GSeiHQnidHnM37KJAg4x7k4u9Zu2t5iMLVFC8745Ev56i5XpS') {
+                        echo "<span>| |_____ <button class='button-showhide'>RATP ˅</button></span><br>
+                        <div id='div-hidden-RATP'>";
+                    } else {
+                        // ici span et div du dessous
+                    }  */ ?>
+                    <span>| |_____ <button class="button-showhide" onclick="showhide(this)">RATP > <span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
+                    <div id="div-hidden-RATP" class="hidden linktoggle">
+                        <div class="container-card-experience">
+                            <div class="card-experience">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
+                                    <i class="fas fa-expand"></i> Fullscreen
+                                </button>
+                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <div class="card-text-container">
+                                    <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
+                                    </div>
+                                    <p>Developpement d'une maquette de faisabilité en <span class="text-important">Client
+                                            Léger</span>
+                                        qui permet la génération de bordereaux XML spécifique, en fonction d'un
+                                        formulaire choisi et de ses champs.
+                                    </p>
+                                    <p class="date-card">Réalisé de Janvier à Février 2022</p>
+                                    <span class="balise">#HTML/CSS</span>
+                                    <span class="balise">#JavaScript</span>
+                                    <span class="balise">#PHP</span>
+                                    <span class="balise">#XML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span>| |_____ <button class="button-showhide" onclick="showhide(this)">ANDRA ><span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
+                    <div id="div-hidden-ANDRA" class="hidden linktoggle">
+                        <div class="container-card-experience">
+                            <div class="card-experience">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video2');">
+                                    <i class="fas fa-expand"></i> Fullscreen
+                                </button>
+                                <video id="video2" src="../assets/pro/astreinte.mp4" muted="" autoplay="" loop=""></video>
+                                <div class="card-text-container">
+                                    <div class="card-Title"><a href="https://www.andra.fr/" target="_blank">ANDRA</a>
+                                    </div>
+                                    <p>Adaptation d'une application <span class="text-important">Client Lourd</span> de
+                                        gestion et calcule de colis en application <span class="text-important">Client
+                                            Léger.</span>
+                                    </p>
+                                    <p class="date-card">Réalisé de Juin à Juillet 2021</p>
+                                    <span class="balise">#HTML/CSS</span>
+                                    <span class="balise">#BootStrap</span>
+                                    <span class="balise">#JavaScript</span>
+                                    <span class="balise">#PHP</span>
+                                </div>
+                            </div>
+
+                            <div class="card-experience">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video3');">
+                                    <i class="fas fa-expand"></i> Fullscreen
+                                </button>
+                                <video id="video3" src="../assets/pro/Gestion-tache.mp4" muted="" autoplay="" loop=""></video>
+
+                                <div class="card-text-container">
+                                    <div class="card-Title"><a href="https://www.andra.fr/" target="_blank">ANDRA</a>
+                                    </div>
+                                    <p>Création d'une petite application <span class="text-important">Client
+                                            Léger</span>
+                                        d'organisation de gestion de taches.
+                                    </p>
+                                    <p class="date-card">Réalisé en Mai 2021</p>
+                                    <span class="balise">#HTML/CSS</span>
+                                    <span class="balise">#BootStrap</span>
+                                    <span class="balise">#PHP</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span>|</span><br>
+                    <span>|_____ <span class="text-orange" id="sommaire-perso">>Personnelles</span></span><br>
+                    <span>| |_____ <button class="button-showhide" onclick="showhide(this)">Flutter Gestionaire de
+                            Mots de passe > <span class="text-secondaire">(Sélectionné pour
+                                Voir)</span></button></span><br>
+                    <div id="div-hidden-Flutter" class="hidden linktoggle">
+                        <div class="container-card-experience">
+                            <div class="card-experience">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video4');">
+                                    <i class="fas fa-expand"></i> Fullscreen
+                                </button>
+                                <video id="video4" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <div class="card-text-container">
+                                    <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
+                                    </div>
+                                    <p>Developpement d'une maquette de faisabilité en <span class="text-important">Client
+                                            Léger</span>
+                                        qui permet la génération de bordereaux XML spécifique, en fonction d'un
+                                        formulaire choisi et de ses champs
+                                    </p>
+                                    <p class="date-card">Réalisé de Janvier à Février 2022</p>
+                                    <span class="balise">#HTML/CSS</span>
+                                    <span class="balise">#JavaScript</span>
+                                    <span class="balise">#PHP</span>
+                                    <span class="balise">#XML</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </div>
-    <?php if (empty($_GET['RATP'])) {  ?>
-        <form style="margin-left: 15%;" action="" method="POST">
-            <input type="password" name="password" placeholder="Password"><br>
-            <input type="submit" name="btnOK">
-        </form>
-    <?php }
+    <!-- <form id="form-pass" style="margin-left: 15%; display:none;" action="" method="POST">
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="submit" name="btnOK">
+    </form> -->
+    <?php  /*if (empty($_GET['RATP'])) {
+        // ici form du dessus
+    }
     if (isset($_POST['btnOK']) && isset($_POST['password'])) {
         $password = $_POST['password'];
         if ($password == 'Vpkg4x-2104') {
@@ -237,7 +308,7 @@
         } else {
             echo "<script> alert('Erreur de Connexion')</script>";
         }
-    }
+    } */
     ?>
     </div>
 </body>

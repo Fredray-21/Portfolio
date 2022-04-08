@@ -30,18 +30,34 @@ function goFullscreen(id) {
 }
 
 function showhide(button) {
+    document.getElementById("div-hidden-" + button.innerHTML.split(" ")[0]).classList.toggle('hidden');
 
-    if (!button.innerHTML.includes("RATP")) {
-        if (button.innerHTML.indexOf("&gt;") > -1) {
-            button.innerHTML = button.innerHTML.replace("&gt;", "&#709;");
-            button.innerHTML = button.innerHTML.replace("Voir", "Fermé");
-        } else {
-            button.innerHTML = button.innerHTML.replace("˅", "&gt;");
-            button.innerHTML = button.innerHTML.replace("Fermé", "Voir");
+    Array.from(document.getElementsByClassName("linktoggle")).forEach((e) => {
+        if (!e.classList.contains("hidden")) {
+            e.classList.add("hidden");
         }
-        document.getElementById("div-hidden-" + button.innerHTML.split(" ")[0]).classList.toggle('hidden');
-    }
+    });
+
+    Array.from(document.getElementsByClassName("button-showhide")).forEach((e) => {
+        if (e != button) {
+            e.innerHTML = e.innerHTML.replace("˅", "&gt;");
+            e.innerHTML = e.innerHTML.replace("Fermé", "Voir");
+        } else {
+            if (button.innerHTML.indexOf("&gt;") > -1) {
+                button.innerHTML = button.innerHTML.replace("&gt;", "&#709;");
+                button.innerHTML = button.innerHTML.replace("Voir", "Fermé");
+
+            } else {
+                button.innerHTML = button.innerHTML.replace("˅", "&gt;");
+                button.innerHTML = button.innerHTML.replace("Fermé", "Voir");
+            document.getElementById("div-hidden-" + button.innerHTML.split(" ")[0]).classList.remove('hidden');
+                
+            }
+            document.getElementById("div-hidden-" + button.innerHTML.split(" ")[0]).classList.toggle('hidden');
+        }
+    });
 }
+
 
 
 function loadPage() {
