@@ -218,7 +218,7 @@
                             </div>
                         </div>
                     </div>
-                    <span>| |_____ <button class="button-showhide" onclick="showhide(this)">ANDRA ><span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
+                    <span>| |_____ <button class="button-showhide" onclick="showhide(this)">ANDRA > <span class="text-secondaire">(Sélectionné pour Voir)</span></button></span><br>
                     <div id="div-hidden-ANDRA" class="hidden linktoggle">
                         <div class="container-card-experience">
                             <div class="card-experience">

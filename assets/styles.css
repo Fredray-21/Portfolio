@@ -379,10 +379,17 @@ video {
     section#nav {
         display: none;
     }
+    
 }
 
 @media screen and (max-height: 745px) {
     #nav {
         font-size: 0.8em;
+    }
+    .separator-nav{
+        margin:20px 0 0 0;
+    }
+    #list-link-nav{
+        padding-top:0;
     }
 }
