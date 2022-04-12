@@ -63,6 +63,9 @@
                         <a href="./experience.php"><i class="fas fa-code"></i><span>Expériences</span></a>
                     </div>
                     <div class="element">
+                        <a href="#"><i class="fas fa-book"></i><span>Veille Techno</span></a>
+                    </div>
+                    <div class="element">
                         <a href="./contact.php"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
                     </div>
                 </div>
@@ -123,7 +126,7 @@
                                 <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video1" src="../assets/pro/PPE1-RESA-VVA.mp4" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><span class="text-orange">PPE1 RESA VVA </span></div>
                                     <p>Developpement d'une application en <span class="text-important">Client
@@ -139,10 +142,10 @@
                             </div>
 
                             <div class="card-experience">
-                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video2');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video2" src="../assets/pro/" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><span class="text-orange">PPE2 FETA RESTO</span>
                                     </div>
@@ -164,10 +167,10 @@
                     <div id="div-hidden-2021" class="hidden linktoggle">
                         <div class="container-card-experience">
                             <div class="card-experience">
-                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video3');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video3" src="../assets/pro/PP1-GenerateurCV.mp4" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><span class="text-orange">PPE1 Générateur de curriculum vitae</span>
                                     </div>
@@ -197,10 +200,10 @@
                     <div id="div-hidden-RATP" class="hidden linktoggle">
                         <div class="container-card-experience">
                             <div class="card-experience">
-                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video1');">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video4');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video1" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video4" src="../assets/pro/" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
                                     </div>
@@ -222,10 +225,10 @@
                     <div id="div-hidden-ANDRA" class="hidden linktoggle">
                         <div class="container-card-experience">
                             <div class="card-experience">
-                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video2');">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video5');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video2" src="../assets/pro/astreinte.mp4" muted="" autoplay="" loop=""></video>
+                                <video id="video5" src="../assets/pro/astreinte.mp4" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><a href="https://www.andra.fr/" target="_blank">ANDRA</a>
                                     </div>
@@ -242,10 +245,10 @@
                             </div>
 
                             <div class="card-experience">
-                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video3');">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video6');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video3" src="../assets/pro/Gestion-tache.mp4" muted="" autoplay="" loop=""></video>
+                                <video id="video6" src="../assets/pro/Gestion-tache.mp4" muted="" autoplay="" loop=""></video>
 
                                 <div class="card-text-container">
                                     <div class="card-Title"><a href="https://www.andra.fr/" target="_blank">ANDRA</a>
@@ -270,10 +273,10 @@
                     <div id="div-hidden-Flutter" class="hidden linktoggle">
                         <div class="container-card-experience">
                             <div class="card-experience">
-                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video4');">
+                                <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video7');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video4" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video7" src="../assets/pro/" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
                                     </div>

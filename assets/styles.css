@@ -348,6 +348,72 @@ video {
     display: none;
 }
 
+input[type="text"],input[type="email"] {
+    border: none;
+    border-bottom: solid 2px white;
+    background: none;
+    color: white;
+    font-size: 0.8em;
+    outline: none;
+    padding: 0 5px 0 5px;
+    width: 25%;
+    transition-duration: 500ms;
+    padding-bottom: 2px;
+}
+input[type="text"]:focus, input[type="email"]:focus {
+    width: 32%;
+    transition-duration: 500ms;
+    border-bottom: solid 2px orange;
+}
+
+input[name="btnSend"] {
+    border: solid 2px orange;
+    background: none;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#lineConsoleContactMsg textarea[name="inputMessage"] {
+    border: solid 2px white;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    padding: 10px;
+    width: 50%;
+    resize: none;
+    transition-duration: 500ms;
+}
+
+#lineConsoleContactMsg textarea[name="inputMessage"]:focus {
+    border: solid 2px orange;
+    transition-duration: 500ms;
+    width: 75%;
+}
+
+#MessageBox{
+    background-color: rgb(70, 188, 70);
+    padding: 4px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    display: none;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.2em;
+}
+#MessageBox > i{
+    font-size: 1.5em;
+}
+#MessageBox > #MessageContent{
+    width: 70%;
+}
+
 
 @media screen and (max-width: 1118px) {
     #container {
@@ -379,17 +445,22 @@ video {
     section#nav {
         display: none;
     }
-    
+
 }
 
-@media screen and (max-height: 745px) {
+@media screen and (max-height: 808px) {
     #nav {
         font-size: 0.8em;
     }
-    .separator-nav{
-        margin:20px 0 0 0;
+
+    .separator-nav {
+        margin: 20px 0 0 0;
     }
-    #list-link-nav{
-        padding-top:0;
+
+    #list-link-nav {
+        padding-top: 0;
+    }
+    #list-link-nav .element{
+        margin: 15px 0 15px 0;
     }
 }

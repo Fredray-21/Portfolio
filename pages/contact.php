@@ -9,8 +9,7 @@
 
     <meta property="og:title" content="Portefolio - Dabadie - Frédéric">
     <meta property="og:type" content="website">
-    <meta property="og:description"
-        content="Portefolio. Sur ce site vous pouvez trouver les compétences que j'ai acquise au cours de mes formations, les différents projets que j'ai réalisé au sein de mon BTS ainsi que des réalisations personnelles. Bonne visite !">
+    <meta property="og:description" content="Portefolio. Sur ce site vous pouvez trouver les compétences que j'ai acquise au cours de mes formations, les différents projets que j'ai réalisé au sein de mon BTS ainsi que des réalisations personnelles. Bonne visite !">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:url" content="https://frederic-dabadie.inovaperf.me/">
     <meta property="og:site_name" content="https://frederic-dabadie.inovaperf.me/">
@@ -24,8 +23,7 @@
     <!-- Style CSS & ICON Fontawesome -->
     <link href="../assets/styles.css" rel="stylesheet">
     <link href="../assets/loader.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="icon" href="../assets/profil-picture.jpeg">
 
 </head>
@@ -43,10 +41,8 @@
             <h1>Frédéric Dabadie</h1>
 
             <div id="row-social">
-                <a href="https://fr.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203" target="_blank"
-                    title="Mon Linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/Fredray-21" target="_blank"><i class="fab fa-github"
-                        title="Mon GitHub"></i></a>
+                <a href="https://fr.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203" target="_blank" title="Mon Linkedin"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Fredray-21" target="_blank"><i class="fab fa-github" title="Mon GitHub"></i></a>
             </div>
             <div class="separator-nav"></div>
             <div id="start">
@@ -65,6 +61,9 @@
                     </div>
                     <div class="element">
                         <a href="./experience.php"><i class="fas fa-code"></i><span>Expériences</span></a>
+                    </div>
+                    <div class="element">
+                        <a href="#"><i class="fas fa-book"></i><span>Veille Techno</span></a>
                     </div>
                     <div class="element active">
                         <a href="./contact.php"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
@@ -94,7 +93,7 @@
                     <a href="./contact.php"><i class="fas fa-phone-alt"></i><span>Contact</span></a>
                 </div>
             </div>
-    </section>
+        </section>
 
 
         <section id="main" style="display: none;">
@@ -112,47 +111,64 @@
                         tree
                     </p>
                     <span>.</span><br>
-                    <span>|_____ Mon Mail: <a class="text-orange"
-                            href="mailto:contact@frederic-dabadie.fr">contact@frederic-dabadie.fr</a></span><br>
-                    <span>|_____ Mon <a class="text-orange" target="_blank"
-                            href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203/">Linkedin</a></span>
+                    <span>|_____ Mon Mail: <a class="text-orange" href="mailto:contact@frederic-dabadie.fr">contact@frederic-dabadie.fr</a></span><br>
+                    <span>|_____ Mon <a class="text-orange" target="_blank" href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-dabadie-01787b203/">Linkedin</a></span>
                     <br>
-                    <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
-                            <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Nom:</span>$ <input
-                            type="text">
-                    </p>
-                    <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
-                            <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Prénom:</span>$
-                        <input type="text">
-                    </p>
-                    <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
-                            <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Mail:</span>$ <input
-                            type="text">
-                    </p>
-                    <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
-                            <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Objet:</span>$ <input
-                            type="text">
-                    </p>
-                    <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
-                            <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span><span class="text-orange">Votre
-                            Message:</span>$ <input type="text">
-                    </p>
-                    <br>
-                    <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
-                            <span class="text-blue">~/Portefolio</span></span><span
-                            class="text-blue">/Contact/Formulaire/</span>$ <input type="submit" value="Valider l'envoi">
-                    </p>
+                    <form action="" method="POST">
+                        <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
+                                <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Contact/</span><span class="text-orange">Nom:</span>$ <input type="text" name="inputName" required>
+                        </p>
+                        <p style="margin-bottom:0;" id="lineConsole2"><span><span class="text-green">Computer:</span>
+                                <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Contact/</span><span class="text-orange">Prénom:</span>$
+                            <input type="text" name="inputPrenom" required>
+                        </p>
+                        <p style="margin-bottom:0;" id="lineConsole3"><span><span class="text-green">Computer:</span>
+                                <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Contact/</span><span class="text-orange">Mail:</span>$ <input type="email" name="inputEmail" required>
+                        </p>
+                        <p style="margin-bottom:0;" id="lineConsole4"><span><span class="text-green">Computer:</span>
+                                <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Contact/</span><span class="text-orange">Objet:</span>$ <input type="text" name="inputObjet" required>
+                        </p>
+                        <p style="margin-bottom:0;" id="lineConsoleContactMsg"><span><span class="text-green">Computer:</span>
+                                <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Contact/</span><span class="text-orange">Votre
+                                Message:</span>$ <br><br>
+                            <textarea name="inputMessage" cols="30" rows="7" required></textarea>
+                        </p>
+                        <p style="margin-bottom:0;" id="lineConsole5"><span><span class="text-green">Computer:</span>
+                                <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Contact/</span>$ <input type="submit" value="Valider l'envoi →" name="btnSend">
+                        </p>
+                    </form>
                 </div>
             </div>
         </section>
     </div>
+    <div id="MessageBox">
+        <i id="MessageIcon" class="fas fa-check"></i>
+        <p id="MessageContent">Votre message a été envoyé avec succès</p>
+    </div>
 </body>
 
+<?php
+if (!empty($_POST["inputName"]) && !empty($_POST["inputPrenom"]) && !empty($_POST["inputEmail"]) && !empty($_POST["inputObjet"]) && !empty($_POST["inputMessage"])) {
+    $destinataire = 'contact@frederic-dabadie.fr';
+    $expediteur = $_POST["inputEmail"];
+    $objet = $_POST["inputObjet"]; // Objet du message
+    $message = $_POST["inputMessage"];
+    $headers = implode("\r\n", [
+        'From: John Conde ' . $_POST["inputEmail"],
+        'Reply-To:' . $_POST["inputEmail"],
+        'MIME-Version: 1.0',
+        'Content-Type: text/html; charset=ISO-8859-1',
+        'X-Mailer: PHP/' . PHP_VERSION
+    ]);
+    if (mail($destinataire, $objet, $message, $headers)) // Envoi du message
+    {
+        echo "<script>alert('Votre message a été envoyé avec succès');</script>";
+    } else // Non envoyé
+    {
+        echo "<script>alert('Votre message n\\''a pas pu être envoyé');</script>";
+    }
+}
+?>
 <script src="../assets/script.js"></script>
 
 </html>
