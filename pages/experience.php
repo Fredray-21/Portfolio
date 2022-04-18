@@ -108,9 +108,10 @@
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
                             <span class="text-blue">~/Portefolio</span></span><span class="text-blue">/Expériences</span>$ cat Sommaire.txt</p>
                     <span>.</span><br>
-                    <span>|_____ <a class="text-orange" href="#sommaire-PPE">>Projets Personnels Encadrés</a></span><br>
-                    <span>|_____ <a class="text-orange" href="#sommaire-pro">>Professionnelles</a></span><br>
-                    <span>|_____ <a class="text-orange" href="#sommaire-perso">>Personnelles</a></span><br>
+                    <span>|_____ <a class="text-orange" href="#sommaire-PPE">> Projets Personnels Encadrés</a></span><br>
+                    <span>|_____ <a class="text-orange" href="#sommaire-pro">> Professionnelles</a></span><br>
+                    <span>|_____ <a class="text-orange" href="#sommaire-perso">> Personnelles</a></span><br>
+                    <span>|_____ <a class="text-orange" target="_blank" href="../assets/Tableau-synthese.pdf">> Tableau-de-synthese.pdf</a></span><br>
 
                     <br>
                     <p style="margin-bottom:0;" id="lineConsole1"><span><span class="text-green">Computer:</span>
