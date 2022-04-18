@@ -48,7 +48,7 @@
             <div id="start">
                 <div id="list-link-nav">
                     <div class="element ">
-                        <a href="../index.html"><i class="fas fa-home"></i><span>Acceuil</span></a>
+                        <a href="../index.html"><i class="fas fa-home"></i><span>Accueil</span></a>
                     </div>
                     <div class="element ">
                         <a href="./presentation.html"><i class="fas fa-user"></i><span>Présentation</span></a>
@@ -75,7 +75,7 @@
         <section id="nav-tel">
             <div id="list-link-nav">
                 <div class="element ">
-                    <a href="../index.html"><i class="fas fa-home"></i><span>Acceuil</span></a>
+                    <a href="../index.html"><i class="fas fa-home"></i><span>Accueil</span></a>
                 </div>
                 <div class="element ">
                     <a href="./presentation.html"><i class="fas fa-user"></i><span>Présentation</span></a>
@@ -145,7 +145,7 @@
                                 <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video2');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video2" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video2" src="../assets/pro/PPE2-FETA_RETO.mp4" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><span class="text-orange">PPE2 FETA RESTO</span>
                                     </div>
@@ -203,7 +203,7 @@
                                 <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video4');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video4" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video4" src="../assets/pro/RATP.mp4" muted="" autoplay="" loop=""></video>
                                 <div class="card-text-container">
                                     <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
                                     </div>
@@ -276,15 +276,13 @@
                                 <button class="button-fullscreen" title="Fullscreen" onclick="goFullscreen('video7');">
                                     <i class="fas fa-expand"></i> Fullscreen
                                 </button>
-                                <video id="video7" src="../assets/pro/" muted="" autoplay="" loop=""></video>
+                                <video id="video7" src="../assets/pro/FredrayPass.mp4" muted="" autoplay="" loop="" style="height:150px; width:100%; background-color:black;"  ></video>
                                 <div class="card-text-container">
-                                    <div class="card-Title"><a href="https://www.ratp.fr/" target="_blank">RATP</a>
+                                    <div class="card-Title"><span class="text-orange">Gestionaire de Mots de passe</span>
                                     </div>
-                                    <p>Developpement d'une maquette de faisabilité en <span class="text-important">Client
-                                            Léger</span>
-                                        qui permet la génération de bordereaux XML spécifique, en fonction d'un
-                                        formulaire choisi et de ses champs
-                                    </p>
+                                    <p>Développement d'une application mobile en langages <span class="text-important">Dart</span>
+                                    avec le <span class="text-important">Framework Flutter</span> créé par Google. Cette application permet de générer, sécurisé et stocker mes mots de passe.
+                                </p>
                                     <p class="date-card">Réalisé de Janvier à Février 2022</p>
                                     <span class="balise">#HTML/CSS</span>
                                     <span class="balise">#JavaScript</span>
