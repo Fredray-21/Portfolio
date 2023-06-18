@@ -1,2 +1,28 @@
 V1/assets/pro/
-V2/assets/pro/
+.idea
+
+# Logs
+V2/logs
+V2/*.log
+V2/npm-debug.log*
+V2/yarn-debug.log*
+V2/yarn-error.log*
+V2/pnpm-debug.log*
+V2/lerna-debug.log*
+
+V2/node_modules
+V2/dist
+V2/dist-ssr
+V2/*.local
+
+# Editor directories and files
+V2/.vscode/*
+V2/!.vscode/extensions.json
+V2/.idea
+V2/.DS_Store
+V2/*.suo
+V2/*.ntvs*
+V2/*.njsproj
+V2/*.sln
+V2/*.sw?
+
