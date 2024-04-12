@@ -1,6 +1,6 @@
 let directionX = 1;
 let directionY = 1;
-const speed = 3;
+const speed = 1;
 
 export const animateGradients = () => {
     const object = document.getElementById('glass');

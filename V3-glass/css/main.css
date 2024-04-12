@@ -1,3 +1,5 @@
+@import url('fonts.css');
+
 html,
 body {
     margin: 0;
@@ -13,14 +15,92 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: -1;
 }
 
-#text {
+.cards {
+    display: flex;
+    gap: 1em;
+    width: 80%;
+}
+
+.card {
+    flex: 1 0 120px;
+    height: 80%;
+    margin: auto;
+    border-radius: 16px;
+    background-color: #ffffff40;
+    backdrop-filter: blur(32px) brightness(110%);
+    -webkit-backdrop-filter: blur(32px) brightness(110%);
+    box-shadow: 0px 4px 4px #00000010, inset 0px -1px 1px #ffffff20, inset 0px 1px 1px #ffffff40;
+    transition: all 0.5s ease-in-out;
+    padding: 0 1em;
+    position: relative;
+}
+
+.card:hover,
+.cardSelected {
+    flex: 10;
+    cursor: pointer;
+}
+
+#main {
+    display: flex;
+    gap: 2em;
+    width: 100%;
+    height: 100%;
+    padding: 0 2em;
+    box-sizing: border-box;
+}
+
+#music {
+    display: flex;
+    flex:1 1 auto;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Sk-Modernist-Regular', sans-serif;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .4em;
+    padding-bottom: 1em;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+#main .card:not(.cardSelected) .cardContent {
+    display: none;
+}
+
+.cardTitle {
+    text-align: center; 
+    font-size: 4em;
+    margin: auto;
+    padding: .2em 0;
+    color: #fff;
+}
+
+.card:not(.cardSelected) .cardTitle {
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
     position: absolute;
-    top: 50%;
+    bottom: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 5em;
+    transition: all 0.5s ease-in-out;
 }
