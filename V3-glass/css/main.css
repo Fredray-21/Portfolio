@@ -26,22 +26,25 @@ body {
 
 .card {
     flex: 1 0 120px;
-    height: 80%;
+    height: 100%;
     margin: auto;
     border-radius: 16px;
     background-color: #ffffff40;
     backdrop-filter: blur(32px) brightness(110%);
     -webkit-backdrop-filter: blur(32px) brightness(110%);
     box-shadow: 0px 4px 4px #00000010, inset 0px -1px 1px #ffffff20, inset 0px 1px 1px #ffffff40;
-    transition: all 0.5s ease-in-out;
+    transition: all .5s ease-in-out;
     padding: 0 1em;
     position: relative;
+    user-select: none;
+
 }
 
-.card:hover,
+/* .card:hover, */
 .cardSelected {
     flex: 10;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
 #main {
@@ -49,18 +52,28 @@ body {
     gap: 2em;
     width: 100%;
     height: 100%;
-    padding: 0 2em;
+    padding: 2em;
     box-sizing: border-box;
 }
 
-#music {
+#right {
     display: flex;
-    flex:1 1 auto;
+    flex-direction: column;
+    gap: 1em;
+    width: 20%;
+    min-width: 300px;
+}
+#right .card {
+    margin: 0;
+}
+
+#right .card:first-child {
+    flex: 6;
 }
 
 body {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     font-family: 'Sk-Modernist-Regular', sans-serif;
@@ -71,7 +84,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: .4em;
     padding-bottom: 1em;
 }
 
@@ -81,15 +93,16 @@ body {
 }
 
 #main .card:not(.cardSelected) .cardContent {
-    display: none;
+    opacity: 0;
 }
 
 .cardTitle {
     text-align: center; 
     font-size: 4em;
     margin: auto;
-    padding: .2em 0;
     color: #fff;
+    width: 100%; 
+    /* l'animation de recalage du texte vien du width */
 }
 
 .card:not(.cardSelected) .cardTitle {
@@ -103,4 +116,43 @@ body {
     color: #fff;
     font-size: 5em;
     transition: all 0.5s ease-in-out;
+}
+
+
+#hour {
+    color: #fff;
+    text-align: center;
+    font-family: 'Sk-Modernist-Mono', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+#clock-location {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 0.5em 1em;
+    margin: 0;
+}
+
+#clock div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    font-size: 3em;
+    padding: 0.2em;
+}
+
+#clock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
