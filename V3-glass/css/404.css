@@ -1,0 +1,39 @@
+body.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 4em 4em 2em 4em;
+    box-sizing: border-box;
+    gap: 2em;
+}
+
+.card.notFound {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card.notFound h1 {
+    font-size: 10vw;
+    margin: 0;
+    text-align: center;
+}
+
+.card.notFound a {
+    text-decoration: none;
+    color: #000;
+    font-size: 4vw;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    transition: transform 0.3s;
+}
+
+.card.notFound a:hover {
+    transform: translateX(0.5em);
+    transition: transform 0.3s;
+}
