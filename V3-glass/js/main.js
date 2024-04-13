@@ -1,5 +1,6 @@
 import { animateGradients } from './background.js';
 import { updateHour } from './clock.js';
+import './music.js';
 
 window.addEventListener('load', () => {
     fetch('https://api.github.com/repos/Fredray-21/Portfolio/commits/main')
@@ -13,7 +14,7 @@ window.addEventListener('load', () => {
 
     const allCards = document.querySelectorAll('.cards .card');
     allCards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
+        card.addEventListener('click', () => {
             card.classList.add('cardSelected');
 
             allCards.forEach(cardOfAll => {
@@ -22,11 +23,7 @@ window.addEventListener('load', () => {
                 }
             });
         });
-        card.addEventListener('mouseleave', () => {
-            card.classList.remove('cardSelected');
-        });
     });
-
 
     
     animateGradients();

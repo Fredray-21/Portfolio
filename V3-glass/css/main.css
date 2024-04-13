@@ -63,6 +63,7 @@ body {
     width: 20%;
     min-width: 300px;
 }
+
 #right .card {
     margin: 0;
 }
@@ -97,11 +98,11 @@ body {
 }
 
 .cardTitle {
-    text-align: center; 
+    text-align: center;
     font-size: 4em;
     margin: auto;
     color: #fff;
-    width: 100%; 
+    width: 100%;
     /* l'animation de recalage du texte vien du width */
 }
 
@@ -155,4 +156,66 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+#music {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    box-sizing: border-box;
+    padding: 1em;
+}
+
+#music h1 {
+    text-align: center;
+    margin: 0;
+}
+
+#disk {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.diskAction {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#logo a {
+    width: 50%;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+
+#musicAlbum {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+    display: inline-block;
 }
