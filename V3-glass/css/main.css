@@ -236,10 +236,12 @@ body {
     width: 100%;
 }
 
-#musicAlbum {
+#musicAlbum,
+#musicArtist {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 250px;
     display: inline-block;
 }
+

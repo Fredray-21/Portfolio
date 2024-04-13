@@ -11,7 +11,7 @@ fetch('https://api.stats.fm/api/v1/users/ptfred2104/streams/recent')
     const musicDiskElem = document.getElementById('disk');
 
     musicTitleElem.textContent = name;
-    musicArtistElem.textContent = "Of: "+artists.map(artist => artist.name).join(', ');
+    musicArtistElem.textContent = "Of: "+ [...new Set(artists.map(artist => artist.name))].join(', ');
     musicAlbumElem.textContent = "Album: "+albums[0].name;
     musicAlbumElem.title = albums[0].name;
 
