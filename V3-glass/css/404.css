@@ -31,6 +31,7 @@ body.notFound {
     padding: 0.5em 1em;
     border-radius: 0.5em;
     transition: transform 0.3s;
+    z-index: 2;
 }
 
 .card.notFound a:hover {
