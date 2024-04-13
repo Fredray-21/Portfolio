@@ -49,4 +49,4 @@ jobs:
             docker pull ghcr.io/${{ steps.convert_repository.outputs.owner }}/${{ steps.convert_repository.outputs.repo }}:${{ github.sha }}
             docker stop portfolio || true
             docker rm portfolio || true
-            docker run -d --name portfolio -p 5002:5000 -v /home/${{ steps.convert_repository.outputs.vpsusername }}/duolingo/:/V3-glass/duolingo/ ghcr.io/${{ steps.convert_repository.outputs.owner }}/${{ steps.convert_repository.outputs.repo }}:${{ github.sha }}
+            docker run -d --name portfolio -p 5002:5000 -v /home/${{ steps.convert_repository.outputs.vpsusername }}/duolingo/:/app/V3-glass/duolingo/ ghcr.io/${{ steps.convert_repository.outputs.owner }}/${{ steps.convert_repository.outputs.repo }}:${{ github.sha }}
