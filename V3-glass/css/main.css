@@ -36,8 +36,35 @@ body {
     padding: 0 1em;
     position: relative;
     user-select: none;
-
+    position: relative;
 }
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+  }
+  
+  .overlay::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.1);
+    width: 40%;
+    height: 100%;
+    top: 0%;
+    left: -125%;
+    transform: skew(-25deg);
+    position: absolute;
+    transition: left 1s ease-out;
+  }
+  
+  .overlay:hover::before {
+    left: 200%;
+  }
+  
 
 /* .card:hover, */
 .cardSelected {

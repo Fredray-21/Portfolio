@@ -1,6 +1,6 @@
 let spotifyPreviewVariable = null;
 
-fetch('https://api.stats.fm/api/v1/users/ptfred2104/streams/recent')
+fetch('https://api.stats.fm/api/v1/users/ptfred2104/streams/')
 .then(response => response.json())
 .then(data => {
     const {albums, artists, name, spotifyPreview} = data.items[0].track;
