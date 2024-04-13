@@ -4,7 +4,6 @@ fetch('https://api.stats.fm/api/v1/users/ptfred2104/streams/recent')
 .then(response => response.json())
 .then(data => {
     const {albums, artists, name, spotifyPreview} = data.items[0].track;
-    console.log(albums, artists, name,spotifyPreview);
 
     const musicTitleElem = document.getElementById('musicTitle');
     const musicArtistElem = document.getElementById('musicArtist');
@@ -19,13 +18,14 @@ fetch('https://api.stats.fm/api/v1/users/ptfred2104/streams/recent')
     musicDiskElem.style.backgroundImage = `url('${albums[0].image}')`;
 
     spotifyPreviewVariable = spotifyPreview;
-    
 })
 .catch(error => console.error('Erreur lors de la requête API :', error));
 
+const containerDiskElem = document.getElementById('containerDisk');
 const musicDiskElem = document.getElementById('disk');
+
 const audio = new Audio();
-musicDiskElem.addEventListener("click", () => {
+containerDiskElem.addEventListener("click", () => {
     musicDiskElem.classList.toggle('diskAction');
 
     if(musicDiskElem.classList.contains('diskAction') && spotifyPreviewVariable !== null){
