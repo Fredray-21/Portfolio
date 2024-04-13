@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
         .catch(error => console.error('Erreur lors de la requête API :', error));
 
 
-    fetch('https://api.frederic-dabadie.fr/duolingo-streak')
+    fetch('https://www.duolingo.com/2017-06-30/users/1118726906?fields=streak')
     .then(response => response.json())
     .then(data => {
         const elem = document.querySelector('#duolingoStreak > #streak')
