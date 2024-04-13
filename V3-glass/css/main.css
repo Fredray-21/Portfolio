@@ -204,7 +204,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.5em; 
+    padding: 0.5em;
     cursor: pointer;
 }
 
@@ -245,3 +245,53 @@ body {
     display: inline-block;
 }
 
+
+.card.duolingo {
+    flex: 1 0;
+}
+.card.duolingo a {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+#duolingo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#duolingoIcon {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+}
+#duolingoIcon img:first-child {
+    width: 50px;
+    height: auto;
+}
+#duolingoIcon img:last-child {
+    width: 100px;
+    height: auto;
+}
+#duolingoStreak {
+    display: flex;
+    gap: 1em;
+}
+
+#duolingoStreak img {
+    width: 25px;
+    height: auto;
+
+}
+
+#duolingoStreak #streak {
+    font-family: 'Sk-Modernist-Mono', sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    color: #000;
+}

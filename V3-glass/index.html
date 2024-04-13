@@ -4,8 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio - Frédéric Dabadie</title>
     <link rel="stylesheet" href="./css/main.css">
+
+    <meta name="description" content="Portfolio of Frédéric Dabadie, a French developer.">
+    <meta property="og:image" content="#">
+    <meta property="og:title" content="Portfolio - Frédéric Dabadie">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://frederic-dabadie.fr">
+    <link rel="icon" href="#" type="image/x-icon">
 </head>
 
 <body>
@@ -13,21 +20,21 @@
         <div class="cards">
             <div class="card cardSelected">
                 <h1 class="cardTitle">ABOUT ME</h1>
-                <div class="cardContent" >
+                <div class="cardContent">
                     <p>Discover our services</p>
                     <button>Get Started</button>
                 </div>
             </div>
             <div class="card">
                 <h1 class="cardTitle">EXPERIENCE</h1>
-                <div class="cardContent" >
+                <div class="cardContent">
                     <p>Discover our projects</p>
                     <button>Get Started</button>
                 </div>
             </div>
             <div class="card">
                 <h1 class="cardTitle">EDUCATION</h1>
-                <div class="cardContent" >
+                <div class="cardContent">
                     <p>Discover our music</p>
                     <button>Get Started</button>
                 </div>
@@ -35,44 +42,60 @@
         </div>
         <div id="right">
             <div id="music" class="card">
-                <h1>Last listen of <a href="https://stats.fm/fredray21" target="_blank" >@Fredray21</a></h1>
-                
-                <div id="containerDisk" >
+                <h1>Last listen of <a href="https://stats.fm/fredray21" target="_blank">@Fredray21</a></h1>
+
+                <div id="containerDisk">
                     <div id="disk"></div>
                     <img id="diskImg" src="./assets/play-pause.svg" alt="Disk">
                 </div>
-                
-                
-                <div id="musicInfo" >
+
+
+                <div id="musicInfo">
                     <div id="musicTitle">...</div>
                     <div id="musicArtist">...</div>
                     <div id="musicAlbum">...</div>
                 </div>
-                <div id="logo" >
-                    <a href="https://stats.fm/fredray21" target="_blank" >
+                <div id="logo">
+                    <a href="https://stats.fm/fredray21" target="_blank">
                         <img src="./assets/statsFM_Logo_RGB_Black.svg" alt="StatsFM">
                     </a>
-                    <a href="https://open.spotify.com/user/ptfred2104" target="_blank" >
+                    <a href="https://open.spotify.com/user/ptfred2104" target="_blank">
                         <img src="./assets/Spotify_Logo_RGB_Black.png" alt="Spotify">
                     </a>
                 </div>
             </div>
+            <div class="card duolingo">
+                <a href="https://www.duolingo.com/profile/Fredray21" target="_blank">
+                    <div id="duolingo">
+                        <div id="duolingoIcon">
+                            <img src="./assets/duolingo-icon.svg" alt="Duolingo icon">
+                            <img src="./assets/duolingo-text.svg" alt="Duolingo title">
+                        </div>
+                        <div id="duolingoStreak">
+                            <p id="streak">...</p>
+                            <img src="./assets/streak.svg" alt="Duolingo icon streak">
+                        </div>
+                    </div>
+                </a>
+            </div>
+
             <div id="hour" class="card">
                 <div id="clock-location">...</div>
-                <div id="clock" >
+                <div id="clock">
                     <div id="clock-h">00</div>
                     <div id="clock-m">00</div>
                     <div id="clock-s">00</div>
                 </div>
             </div>
             <div class="card">
-                <h1>Other</h1>
             </div>
+
         </div>
     </section>
     <section id="footer">
         <p>© 2024 Glass. All rights reserved</p>
-        <p>Designed & Created by <a href="https://github.com/Fredray-21/" target="_blank">Fredray21</a> | Commit: <a id="commitHash" target="_blank" href="#">...</a></p>
+        <p>Designed & Created by <a href="https://github.com/Fredray-21/" target="_blank">Fredray21</a> | Commit: <a
+                id="commitHash" target="_blank" href="#">...</a></p>
     </section>
 
     <!-- Background -->
