@@ -13,34 +13,41 @@ window.addEventListener('load', () => {
         .catch(error => console.error('Erreur lors de la requête API :', error));
 
 
-    fetch('./duolingo/streakDuolingo.json')
-    .then(response => response.json())
-    .then(data => {
-        const elem = document.querySelector('#duolingoStreak > #streak')
-        const duolingoStreak = data.streak;
-        elem.textContent = duolingoStreak;
-    })
-    .catch(error => console.error('Erreur lors de la requête API :', error));
-
+    const elemDuolingo = document.querySelector('#duolingoStreak > #streak')
+    if (elemDuolingo) {
+        fetch('./duolingo/streakDuolingo.json')
+            .then(response => response.json())
+            .then(data => {
+                const elem = document.querySelector('#duolingoStreak > #streak')
+                const duolingoStreak = data.streak;
+                elem.textContent = duolingoStreak;
+            })
+            .catch(error => console.error('Erreur lors de la requête API :', error));
+    }
 
     const allCards = document.querySelectorAll('.cards .card');
-    allCards.forEach(card => {
-        card.addEventListener('click', () => {
-            card.classList.add('cardSelected');
+    if (allCards.length !== 0) {
+        allCards.forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.add('cardSelected');
 
-            allCards.forEach(cardOfAll => {
-                if (card !== cardOfAll) {
-                    cardOfAll.classList.remove('cardSelected');
-                }
+                allCards.forEach(cardOfAll => {
+                    if (card !== cardOfAll) {
+                        cardOfAll.classList.remove('cardSelected');
+                    }
+                });
             });
         });
-    });
+    }
 
-    
+
     animateGradients();
-    updateHour();
-    setInterval(() => {
+    const locationElem = document.getElementById('clock-location');
+    if (locationElem) {
         updateHour();
-    }, 1000);
+        setInterval(() => {
+            updateHour();
+        }, 1000);
+    }
 });
 
