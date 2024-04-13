@@ -38,7 +38,6 @@ body {
     padding: 0 1em;
     position: relative;
     user-select: none;
-    position: relative;
 }
 
 
@@ -50,26 +49,25 @@ body {
     bottom: 0;
     overflow: hidden;
     z-index: 1;
-  }
-  
-  .overlay::before {
+}
+
+.overlay::before {
     content: "";
     background: rgba(255, 255, 255, 0.1);
     width: 40%;
-    height: 100%;
+    height: 100vh;
     top: 0%;
-    left: -125%;
+    left: -180%;
     transform: skew(-25deg);
     position: absolute;
     transition: left 1s ease-out;
-  }
-  
-  .overlay:hover::before {
-    left: 200%;
-  }
-  
+}
 
-/* .card:hover, */
+.overlay:hover::before {
+    left: 200%;
+}
+
+
 .cardSelected {
     flex: 10;
     cursor: pointer;
@@ -298,14 +296,17 @@ body {
     cursor: pointer;
     width: 100%;
 }
+
 #duolingoIcon img:first-child {
     width: 50px;
     height: auto;
 }
+
 #duolingoIcon img:last-child {
     width: 100px;
     height: auto;
 }
+
 #duolingoStreak {
     display: flex;
     gap: 1em;
