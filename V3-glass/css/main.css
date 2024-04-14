@@ -297,14 +297,16 @@ body {
     width: 100%;
 }
 
-#duolingoIcon img:first-child {
+#duolingoIcon #duoIco,
+#duolingoIcon #duoFlag {
     width: 50px;
     height: auto;
 }
 
-#duolingoIcon img:last-child {
+#duolingoIcon #duoTxt {
     width: 100px;
     height: auto;
+    margin: auto;
 }
 
 #duolingoStreak {
