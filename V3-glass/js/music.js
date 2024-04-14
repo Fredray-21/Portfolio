@@ -17,7 +17,8 @@ if (containerDiskElem) {
             musicAlbumElem.textContent = "Album: " + albums[0].name;
             musicAlbumElem.title = albums[0].name;
 
-            musicDiskElem.style.backgroundImage = `url('${albums[0].image}')`;
+            const urlImage = albums[0].image ? albums[0].image : artists[0].image;
+            musicDiskElem.style.backgroundImage = `url('${urlImage}')`;
 
             spotifyPreviewVariable = spotifyPreview;
         })

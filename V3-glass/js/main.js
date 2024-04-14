@@ -2,7 +2,11 @@ import { animateGradients } from './background.js';
 import { updateHour } from './clock.js';
 import './music.js';
 
+
+
 window.addEventListener('load', () => {
+    animateGradients();
+
     fetch('https://api.github.com/repos/Fredray-21/Portfolio/commits/main')
         .then(response => response.json())
         .then(data => {
@@ -11,7 +15,6 @@ window.addEventListener('load', () => {
             elem.href = data.html_url;
         })
         .catch(error => console.error('Erreur lors de la requête API :', error));
-
 
     const elemDuolingo = document.querySelector('#duolingoStreak > #streak')
     if (elemDuolingo) {
@@ -25,29 +28,60 @@ window.addEventListener('load', () => {
             .catch(error => console.error('Erreur lors de la requête API :', error));
     }
 
-    const allCards = document.querySelectorAll('.cards .card');
-    if (allCards.length !== 0) {
-        allCards.forEach(card => {
-            card.addEventListener('click', () => {
-                card.classList.add('cardSelected');
+    const allCards = document.querySelectorAll('.cards .cardOuter');
 
-                allCards.forEach(cardOfAll => {
-                    if (card !== cardOfAll) {
-                        cardOfAll.classList.remove('cardSelected');
-                    }
-                });
-            });
+    function handleClick(card) {
+        card.classList.add('cardSelected');
+        allCards.forEach(cardOfAll => {
+            if (card !== cardOfAll) {
+                cardOfAll.classList.remove('cardSelected');
+            }
+        });
+    }
+
+    if (window.innerWidth <= 1250) {
+        allCards.forEach(card => {
+            card.classList.add('cardSelected');
         });
     }
 
 
-    animateGradients();
+    if (allCards.length !== 0 && window.innerWidth > 1250) {
+        allCards.forEach(card => {
+            card.addEventListener('click', () => handleClick(card));
+        });
+    }
+
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth <= 1250) {
+            allCards.forEach(card => {
+                card.classList.add('cardSelected');
+                //TODO : remove event listener not working
+                card.removeEventListener('click', () => handleClick(card));
+            });
+        } else {
+            allCards.forEach((card, idx) => {
+                if (idx !== 0) {
+                    card.classList.remove('cardSelected');
+                }
+                card.addEventListener('click', () => handleClick(card));
+            });
+        }
+    });
+
+
     const locationElem = document.getElementById('clock-location');
     if (locationElem) {
         updateHour();
         setInterval(() => {
             updateHour();
         }, 1000);
+    }
+
+    const ageElem = document.getElementById('age');
+    if (ageElem) {
+        ageElem.textContent = Math.floor((new Date() - new Date('2002-04-21')) / 31557600000);
     }
 });
 
