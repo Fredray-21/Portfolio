@@ -35,13 +35,20 @@ window.addEventListener('load', () => {
         allCards.forEach(cardOfAll => {
             if (card !== cardOfAll) {
                 cardOfAll.classList.remove('cardSelected');
+                cardOfAll.querySelector('.cardContent').classList.remove('cardContentVisible');
             }
         });
+
+        setTimeout(function() {
+            card.querySelector('.cardContent').classList.add('cardContentVisible');
+        }, 500); // Correspond à la durée de l'animation flex (1s)
+
     }
 
     if (window.innerWidth <= 1250) {
         allCards.forEach(card => {
             card.classList.add('cardSelected');
+            card.querySelector('.cardContent').classList.add('cardContentVisible');
         });
     }
 

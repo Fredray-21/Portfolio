@@ -1,552 +1,558 @@
-@import url('fonts.css');
-@import url('404.css');
+@import url("fonts.css");
+@import url("404.css");
 
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    margin  : 0;
+    padding : 0;
+    width   : 100%;
+    height  : 100%;
+    overflow : auto;
 }
 
 #glass {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    width    : 100vw;
+    height   : 100vh;
+    z-index  : -1;
 }
 
 .cards {
-    display: flex;
-    gap: 1em;
-    width: 80%;
+    display : flex;
+    gap     : 1em;
+    width   : 80%;
 }
 
-.cardOuter.cardSelected {
-    overflow: hidden;
+.cardOuter.cardSelected .card #aboutmeDesc {
+    overflow : auto;
 }
 
 .cardOuter {
-    display: flex;
-    border-radius: 16px;
-    transition: all 0.5s ease-in-out;
+    display       : flex;
+    border-radius : 16px;
+    transition    : all 0.5s ease-in-out;
+    overflow      : hidden
 }
 
 .card {
-    height: 100%;
-    margin: auto;
-    border-radius: 16px;
-    background-color: #ffffff40;
-    backdrop-filter: blur(32px) brightness(110%);
-    -webkit-backdrop-filter: blur(32px) brightness(110%);
-    box-shadow: 0px 4px 4px #00000010, inset 0px -1px 1px #ffffff20, inset 0px 1px 1px #ffffff40;
-    transition: all .5s ease-in-out;
-    position: relative;
-    user-select: none;
-}
-
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    z-index: 1;
-    cursor: default;
-}
-
-.overlay::before {
-    content: "";
-    background: rgba(255, 255, 255, 0.1);
-    width: 40%;
-    height: 100vh;
-    top: 0%;
-    left: -180%;
-    transform: skew(-25deg);
-    position: absolute;
-    transition: left 1s ease-out;
-}
-
-.overlay:hover::before {
-    left: 200%;
+    height                  : 100%;
+    margin                  : auto;
+    border-radius           : 16px;
+    background-color        : #ffffff40;
+    backdrop-filter         : blur(32px) brightness(110%);
+    -webkit-backdrop-filter : blur(32px) brightness(110%);
+    box-shadow              : 0px 4px 4px #00000010, inset 0px -1px 1px #ffffff20, inset 0px 1px 1px #ffffff40;
+    transition              : all .5s ease-in-out;
+    position                : relative;
+    user-select             : none;
+    display                 : flex;
+    flex-direction          : column;
+    gap                     : 2em;
+    overflow                : auto;
 }
 
 
 .cardSelected,
 .cardSelected .card {
-    flex: 10;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    flex       : 10;
+    cursor     : pointer;
+    transition : all 0.5s ease-in-out;
 }
 
 #main {
-    display: flex;
-    gap: 2em;
-    width: 100%;
-    padding: 2em;
-    box-sizing: border-box;
+    display    : flex;
+    gap        : 2em;
+    width      : 100%;
+    padding    : 2em;
+    box-sizing : border-box;
+    flex       : 1;
+    overflow   : hidden;
 }
 
 #right {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 20%;
-    min-width: 300px;
+    display        : flex;
+    flex-direction : column;
+    gap            : 1em;
+    width          : 20%;
+    min-width      : 300px;
 }
 
 #right .card {
-    margin: 0;
-}
-
-#right .card:first-child {
-    flex: 6;
+    margin : 0;
 }
 
 body {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-    font-family: 'Sk-Modernist-Regular', sans-serif;
+    display         : flex;
+    justify-content : flex-start;
+    align-items     : center;
+    flex-direction  : column;
+    font-family     : "Sk-Modernist-Regular", sans-serif;
 }
 
 #footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-bottom: 1em;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    flex-direction  : column;
+    padding-bottom  : 1em;
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing : border-box;
 }
 
 #footer p {
-    margin: 0;
-    font-size: 1.1em;
+    margin    : 0;
+    font-size : 1.1em;
 }
 
-#main .cardOuter:not(.cardSelected) .cardContent {
-    display: none;
+#main .cardOuter .cardContent {
+    opacity    : 0;
+    height     : 0;
+    width      : 0;
+    transition : all 0ms;
+    overflow   : hidden;
 }
+
+#main .cardOuter.cardSelected .cardContent.cardContentVisible {
+    opacity    : 1;
+    width      : 100%;
+    height     : fit-content;
+    flex       : 1;
+    transition : opacity 0.5s ease-in-out;
+}
+
 
 #main .cards .card {
-    min-width: 120px;
+    min-width : 200px;
 }
 
 .cardTitle {
-    text-align: center;
-    font-size: 4em;
-    margin: auto;
-    color: #fff;
-    width: 100%;
-    /* l'animation de recalage du texte vien du width */
+    text-align : center;
+    font-size  : 4em;
+    margin     : 0;
+    color      : #fff;
+    width      : 100%;
 }
 
 .cardOuter:not(.cardSelected) .cardTitle {
-    transform: rotate(-90deg) translateY(-50%);
-    transform-origin: 0 0;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 5em;
-    transition: all 0.5s ease-in-out;
+    transform        : rotate(-90deg);
+    transform-origin : 0 0;
+    position         : absolute;
+    bottom           : 0;
+    left             : 0;
+    margin           : 0;
+    padding          : 0;
+    color            : #fff;
+    font-size        : 5em;
+    width            : fit-content;
+    height           : 200px;
+    display          : flex;
+    align-items      : center;
+    justify-content  : center;
 }
 
 
 #hour {
-    color: #fff;
-    text-align: center;
-    font-family: 'Sk-Modernist-Mono', sans-serif;
-    padding: 20px;
-    box-sizing: border-box;
-    gap: 1em;
-    display: flex;
-    flex-direction: column;
+    color          : #fff;
+    text-align     : center;
+    font-family    : "Sk-Modernist-Mono", sans-serif;
+    padding        : 20px;
+    box-sizing     : border-box;
+    gap            : 1em;
+    display        : flex;
+    flex-direction : column;
 }
 
 #clock-location {
-    color: #fff;
-    text-align: center;
-    font-size: 1.5em;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    padding: 0.5em 1em;
-    margin: 0;
+    color            : #fff;
+    text-align       : center;
+    font-size        : 1.5em;
+    background-color : rgba(0, 0, 0, 0.3);
+    border-radius    : 5px;
+    padding          : 0.5em 1em;
+    margin           : 0;
 }
 
 #clock div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    font-size: 3em;
-    padding: 0.2em;
+    display          : flex;
+    justify-content  : center;
+    align-items      : center;
+    gap              : 1em;
+    background-color : rgba(0, 0, 0, 0.3);
+    border-radius    : 5px;
+    font-size        : 3em;
+    padding          : 0.2em;
 }
 
 #clock {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
 }
 
 
 #music {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1em;
-    box-sizing: border-box;
-    padding: 1em;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : flex-start;
+    align-items     : center;
+    gap             : 1em;
+    box-sizing      : border-box;
+    padding         : 1em;
 }
 
 #music h1 {
-    text-align: center;
-    margin: 0;
+    text-align : center;
+    margin     : 0;
 }
 
 #containerDisk {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 2;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 100%;
+    height          : 100%;
+    position        : relative;
+    z-index         : 2;
 }
 
 #disk {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.3);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
+    width               : 200px;
+    height              : 200px;
+    border-radius       : 50%;
+    background-color    : rgba(0, 0, 0, 0.3);
+    background-position : center;
+    background-size     : cover;
+    background-repeat   : no-repeat;
+    position            : relative;
 }
 
 #diskImg {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.5em;
-    cursor: pointer;
+    width            : 50px;
+    height           : 50px;
+    border-radius    : 50%;
+    position         : absolute;
+    top              : 50%;
+    left             : 50%;
+    transform        : translate(-50%, -50%);
+    z-index          : 1;
+    background-color : rgba(0, 0, 0, 0.6);
+    padding          : 0.5em;
+    cursor           : pointer;
 }
 
 .diskAction {
-    animation: spin 10s linear infinite;
+    animation : spin 10s linear infinite;
 }
 
 @keyframes spin {
     100% {
-        transform: rotate(360deg);
+        transform : rotate(360deg);
     }
 }
 
 #rightOther {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    width: 100%;
+    display        : flex;
+    flex-direction : column;
+    gap            : 1em;
+    width          : 100%;
 }
 
 #logo a {
-    width: 50%;
-    z-index: 2;
+    width   : 50%;
+    z-index : 2;
 }
 
 #logo img {
-    width: 100%;
-    height: 100%;
+    width  : 100%;
+    height : 100%;
 }
 
 #logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    width: 100%;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    gap             : 1em;
+    width           : 100%;
 }
 
 #musicAlbum,
 #musicArtist {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 250px;
-    display: inline-block;
+    white-space   : nowrap;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    width         : 250px;
+    display       : inline-block;
 }
 
 
 .card.duolingo a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
+    width           : 100%;
+    height          : 100%;
+    text-decoration : none;
 }
 
 #duolingo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 100%;
+    height          : 100%;
+    padding         : 1em;
+
 }
 
 #duolingoIcon {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    cursor: pointer;
-    width: 100%;
+    display         : flex;
+    justify-content : flex-start;
+    align-items     : center;
+    cursor          : pointer;
+    width           : 100%;
+    gap             : 1em;
+
 }
 
 #duolingoIcon #duoIco {
-    width: 50px;
-    height: auto;
+    width  : 50px;
+    height : auto;
 }
 
 #duolingoIcon #duoFlag {
-    width: 30px;
-    height: auto;
-    margin: 0 auto;
+    width  : 30px;
+    height : auto;
 }
 
 #duolingoIcon #duoTxt {
-    width: 100px;
-    height: auto;
+    width  : 100px;
+    height : auto;
 }
 
 #duolingoStreak {
-    display: flex;
-    gap: 1em;
+    display : flex;
+    gap     : 1em;
 }
 
 #duolingoStreak img {
-    width: 25px;
-    height: auto;
+    width  : 25px;
+    height : auto;
 
 }
 
 #duolingoStreak #streak {
-    font-family: 'Sk-Modernist-Mono', sans-serif;
-    font-size: 1.5em;
-    margin: 0;
-    color: #000;
+    font-family : "Sk-Modernist-Mono", sans-serif;
+    font-size   : 1.5em;
+    margin      : 0;
+    color       : #000;
 }
 
 #otherAccount {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: .5em;
-    box-sizing: border-box;
+    display         : flex;
+    justify-content : space-evenly;
+    align-items     : center;
+    width           : 100%;
+    height          : 100%;
+    padding         : .5em;
+    box-sizing      : border-box;
 }
 
 #otherAccount a {
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    width: 50px;
-    height: 50px;
+    cursor     : pointer;
+    transition : all .3s ease-in-out;
+    width      : 50px;
+    height     : 50px;
 }
 
 #otherAccount a img {
-    width: 100%;
-    height: 100%;
+    width  : 100%;
+    height : 100%;
 }
 
 #otherAccount a:hover {
-    transform: scale(1.2);
-    transition: all .3s ease-in-out;
+    transform  : scale(1.2);
+    transition : all .3s ease-in-out;
 }
 
 #aboutme {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 4em;
-    width: 100%;
-    margin-top: 2em;
-    padding: 2em;
-    box-sizing: border-box;
+    display         : flex;
+    justify-content : center;
+    align-items     : flex-start;
+    gap             : 4em;
+    width           : 100%;
+    padding         : 2em;
+    box-sizing      : border-box;
+    transition      : all .3s ease-in-out;
 }
 
 #aboutme img {
-    width: 15vw;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    object-fit: cover;
+    width         : 15vw;
+    aspect-ratio  : 1 / 1;
+    border-radius : 50%;
+    object-fit    : cover;
 }
 
 #aboutme p {
-    font-size: 1.2em;
-    margin: 0;
+    font-size : 1.2em;
+    margin    : 0;
 }
 
 #aboutme h2 {
-    font-size: 2em;
-    margin: 0;
+    font-size : 2em;
+    margin    : 0;
 }
 
 #aboutme #my {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    display        : flex;
+    flex-direction : column;
+    gap            : 1em;
 }
 
 #my #myContent {
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
+    display        : flex;
+    gap            : 1em;
+    flex-direction : column;
 }
 
 #aboutme #my #name {
-    font-size: 1.6em;
-    margin: 0;
+    font-size : 1.6em;
+    margin    : 0;
 }
 
 
 #myCV {
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.4);
-    padding: .5em;
-    box-sizing: border-box;
-    border-radius: 5px;
-    color: #fff;
-    text-align: center;
-    transition: all .3s ease-in-out;
-    position: relative;
-    text-decoration: none;
-    font-size: 1.5em;
+    z-index         : 2;
+    background      : rgba(0, 0, 0, 0.4);
+    padding         : .5em;
+    box-sizing      : border-box;
+    border-radius   : 5px;
+    color           : #fff;
+    text-align      : center;
+    transition      : all .3s ease-in-out;
+    position        : relative;
+    text-decoration : none;
+    font-size       : 1.5em;
 }
 
 #myCV:hover {
-    background: rgba(0, 0, 0, 0.6);
-    transition: all .3s ease-in-out;
+    background : rgba(0, 0, 0, 0.6);
+    transition : all .3s ease-in-out;
 }
 
 #aboutmeDesc {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    height: 100%;
+    display         : flex;
+    flex-direction  : column;
+    align-items     : center;
+    justify-content : flex-start;
+    gap             : 1em;
+    height          : 100%;
 }
 
 #aboutmeDesc p {
-    font-size: 1.1em;
-    margin: 0;
+    font-size : 1.1em;
+    margin    : 0;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-    background: #f1f1f1;
+    width      : 5px;
+    height     : 5px;
+    background : #f1f1f1;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background : #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #FCB0D3;
+    background : #FCB0D3;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #f792c1;
+    background : #f792c1;
 }
 
 
-@media (max-width: 1440px) {
+@media (max-width : 1440px) {
 
     #aboutmeDesc {
-        overflow: auto;
-        height: 100%;
+        overflow : auto;
+        height   : 100%;
     }
 
     #aboutmeDesc h1 {
-        margin: .5em 0 0 0;
+        margin : .5em 0 0 0;
     }
 
 
     #aboutme {
-        flex-direction: column;
-        align-items: center;
-        gap: 1em;
-        margin: 0;
+        flex-direction : column;
+        align-items    : center;
+        gap            : 1em;
+        margin         : 0;
     }
 
     #aboutme #my {
-        align-items: center;
-        flex-direction: row;
-        gap: 4em;
+        align-items    : center;
+        flex-direction : row;
+        gap            : 4em;
     }
 
 }
 
 
-@media (max-width: 1250px) {
+@media (max-width : 1250px) {
     body {
-        overflow-y: auto;
+        overflow-y : auto;
     }
+
     #main {
-        flex-direction: column;
+        flex-direction : column;
     }
+
     .cards {
-        flex-direction: column;
-        width: 100%;
+        flex-direction : column;
+        width          : 100%;
     }
 
     .cardOuter.cardSelected {
-        overflow: visible;
+        overflow : visible;
     }
+
     #right {
-        flex-direction: row;
-        width: fit-content;
+        flex-direction : row;
+        width          : fit-content;
     }
+
     #rightOther,
     #music {
-        width: 50%;
+        width : 50%;
     }
-   
+
 }
 
-@media (max-width: 660px) {
+@media (max-width : 660px) {
+
+    .cardTitle {
+        font-size : 3em;
+    }
+
     #aboutme #my {
-        flex-direction: column;
-        gap: 1em;
+        flex-direction : column;
+        gap            : 1em;
     }
+
     #aboutme #my img {
-        width: 150px;
+        width : 150px;
     }
+
     #right {
-        flex-direction: column;
+        flex-direction : column;
     }
+
     #rightOther,
     #music {
-        width: 100%;
+        width : 100%;
     }
 }
