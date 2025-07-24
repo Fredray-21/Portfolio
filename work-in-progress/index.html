@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Work in Progress</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #e4b1ff, #ffb3d5, #ff80bf);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      margin-top: 30px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #ffe1f4;
+    }
+
+    .countdown {
+      font-size: 24px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>FREDERIC DABADIE</h1>
+
+  <div class="container">
+    <h2>🚧 WORK IN PROGRESS 🚧</h2>
+    <p>Coming soon...</p>
+    <div class="countdown" id="countdown">Chargement du compte à rebours...</div>
+  </div>
+
+  <script>
+    const countdownElement = document.getElementById("countdown");
+    const targetDate = new Date("September 1, 2025 00:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        countdownElement.innerHTML = "🚀 C'est en ligne !";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = 
+        `${days}j ${hours}h ${minutes}m ${seconds}s avant lancement`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // lancer immédiatement
+  </script>
+</body>
+</html>

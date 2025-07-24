@@ -6,4 +6,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD ["npx", "http-server", "-p", "5000", "V3-glass"]
+CMD ["npx", "http-server", "-p", "5000", "work-in-progress"]
