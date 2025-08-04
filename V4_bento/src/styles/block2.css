@@ -109,13 +109,13 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    cursor: pointer;
     flex: initial;
 }
 
 #block2 .block2-text-subtitle_btns svg {
     width: 24px;
     height: 24px;
+    cursor: pointer;
 }
 
 #block2 .block2-text-subtitle_btns svg:hover path {
