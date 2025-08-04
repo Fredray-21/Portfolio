@@ -4,6 +4,10 @@ WORKDIR /app
 
 COPY . .
 
+# on va dans le dossier V4_bento et on installe les deps
+WORKDIR /app/V4_bento
+RUN npm install
+
 EXPOSE 5000
 
-CMD ["npx", "http-server", "-p", "5000", "work-in-progress"]
+CMD ["npx", "http-server", "-p", "5000", "."]

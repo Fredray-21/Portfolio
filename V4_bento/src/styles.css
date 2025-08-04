@@ -1,0 +1,134 @@
+@import url('./styles/block1.css');
+@import url('./styles/block2.css');
+@import url('./styles/block3.css');
+@import url('./styles/block4.css');
+@import url('./styles/block5.css');
+@import url('./styles/block6.css');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+.desktop-only {
+    display: flex;
+}
+
+.mobile-only {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 40px 0 40px 0;
+    background: #f7f7f7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('./assets/Pattern.png');
+    background-repeat: repeat;
+    background-size: 37.5vw 37.5vw;
+    height: fit-content;
+}
+
+.desktop-only.row1 {
+    position: relative;
+    height: 305px;
+    width: 886px;
+    margin-bottom: 20px;
+    left: 0;
+    top: 0;
+}
+
+.desktop-only.row2 {
+    position: relative;
+    height: 370px;
+    width: 886px;
+    left: 0;
+    top: 0;
+
+    gap: 20px;
+}
+
+.desktop-only.row2 .row2-right-wrapper {
+    position: relative;
+}
+
+#block1,
+#block2,
+#block3,
+#block4,
+#block5,
+#block5_bis,
+#block6 {
+    opacity: 0;
+}
+
+#nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 324px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    z-index: 1;
+}
+
+#nav a {
+    opacity: 0;
+    text-decoration: none;
+    color: #312531;
+    font-size: 16px;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+#nav a.active {
+    text-decoration: underline;
+    color: #FD9AFB;
+}
+
+
+
+/* ================================== MOBILE STYLES ================================== */
+@media (max-width: 900px) {
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: flex;
+    }
+    
+    body {
+        padding: 5vw;
+    }
+}
+
+.mobile-only.row1 {
+    position: relative;
+    height: auto;
+    width: 100%;
+    left: 0;
+    top: 0;
+    justify-content: center;
+}
+
+/* =================================================================================== */
+
+
+
+
+

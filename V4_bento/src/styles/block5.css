@@ -1,0 +1,104 @@
+#block5 {
+    position: absolute;
+    height: 175px;
+    width: 340px;
+    top: 195px;
+    left: 0;
+
+    overflow: hidden;
+    z-index: 1;
+
+    transform-origin: top right;
+}
+
+#block5 .block5-title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: #312531;
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#block5 .block5-content {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+
+    display: flex;
+    gap: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#block5 .block5-content .col {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+
+/* ================================== MOBILE STYLES ================================== */
+@media (max-width: 900px) {
+    #block5 {
+        width: 100%;
+        height: 45vw;
+        background: none;
+        border: none;
+        padding: 0;
+        position: relative;
+        top: -5vw;
+        margin-bottom: -5vw;
+    }
+
+    #block5 .block5-title {
+        text-align: center;
+
+        position: absolute;
+        right: 3.75vw;
+        top: 2.5vw;
+        left: auto;
+        font-weight: 600;
+    }
+
+    #block5 .block5-title svg {
+        width: 6vw;
+        height: 6vw;
+    }
+
+    #block5 .block5-title span {
+        font-size: 4vw;
+    }
+
+    #block5 .block5-content {
+        top: 14.5vw;
+        left: 3.75vw;
+        gap: 2.5vw;
+        font-size: 3.5vw;
+    }
+
+    #block5 .block5-content .col {
+        gap: 1.25vw;
+    }
+
+
+    #block5_bis {
+        width: 35vw;
+        height: auto;
+        background: none;
+        border: none;
+        padding: 0;
+        position: absolute;
+        top: auto;
+        right: 0;
+        top: 27.5vw;
+    }
+}
